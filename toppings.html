@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SNOWA · Quản lý topping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="./public/css/dashboard.css" />
+    <link rel="stylesheet" href="./public/css/pages.css" />
+    <link rel="stylesheet" href="./public/css/system-pages.css" />
+    <link rel="stylesheet" href="./public/css/snowa-identity.css?v=20261105-management-forms-v2" />
+    <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+    <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+    <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+    <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+    <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+    <link rel="stylesheet" href="./public/css/topping-manager.css?v=20261109-v1" />
+</head>
+<body class="page-toppings">
+<div class="dashboard-shell">
+    <aside class="sidebar">
+        <a class="brand" href="index.html"><img class="brand-logo" src="./public/image/logo.webp" alt="SNOWA · Fresh Moments Cafe" /></a>
+        <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+        <nav class="side-nav">
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-chart-pie"></i><span>Tổng quan</span></a>
+            <a class="nav-link" href="sales.html"><i class="fa-solid fa-cash-register"></i><span>Bán hàng (POS)</span></a>
+            <a class="nav-link" href="orders.html"><i class="fa-solid fa-receipt"></i><span>Đơn hàng</span></a>
+            <a class="nav-link" href="tables.html"><i class="fa-solid fa-table-cells-large"></i><span>Sơ đồ bàn</span></a>
+            <a class="nav-link active" href="products.html"><i class="fa-solid fa-mug-hot"></i><span>Sản phẩm</span></a>
+            <a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group"></i><span>Danh mục sản phẩm</span></a>
+            <a class="nav-link" href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i><span>Kho hàng</span></a>
+            <a class="nav-link" href="customers.html"><i class="fa-solid fa-users"></i><span>Khách hàng</span></a>
+            <a class="nav-link" href="promotions-admin.html"><i class="fa-solid fa-tags"></i><span>Khuyến mãi</span></a>
+            <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-column"></i><span>Báo cáo</span></a>
+            <a class="nav-link" href="staff.html"><i class="fa-solid fa-user-group"></i><span>Nhân viên</span></a>
+            <a class="nav-link" href="settings.html"><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a>
+        </nav>
+        <div class="sidebar-bottom"><span>Fresh moments, every day</span></div>
+    </aside>
+    <main class="main-area">
+        <header class="topbar">
+            <span class="breadcrumb">Quản lý cửa hàng　›　<a href="products.html">Sản phẩm</a>　›　<strong>Topping</strong></span>
+            <div class="topbar-actions">
+                <span class="store-open"><i class="fa-solid fa-circle"></i> Cửa hàng đang mở</span>
+                <button class="icon-button" aria-label="Thông báo"><i class="fa-regular fa-bell"></i></button>
+                <div class="admin-profile"><span class="avatar">A</span><span><strong>Quản trị viên</strong><small>SNOWA Cafe</small></span></div>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="page-heading app-page-heading topping-page-heading">
+                <div>
+                    <h1><i class="fa-solid fa-glass-water" aria-hidden="true"></i><span>Quản lý topping</span></h1>
+                    <p>Topping có giá, định lượng kho và hình ảnh riêng, không tạo như một sản phẩm trong thực đơn.</p>
+                </div>
+                <div class="topping-heading-actions">
+                    <a class="button-light" href="products.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Sản phẩm</a>
+                    <a class="button-primary" href="create-topping.html"><i class="fa-solid fa-plus" aria-hidden="true"></i> Thêm topping</a>
+                </div>
+            </div>
+
+            <section class="topping-manager" aria-labelledby="topping-list-title">
+                <div class="topping-list-head">
+                    <div><h2 id="topping-list-title">Danh sách topping</h2><p>Ảnh và thông tin để nhân viên chọn đúng món thêm khi bán hàng.</p></div>
+                    <span class="topping-count">4 loại topping</span>
+                </div>
+                <div class="topping-toolbar">
+                    <label class="topping-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input type="search" placeholder="Tìm topping..." aria-label="Tìm topping" /></label>
+                    <div class="topping-filters" aria-label="Lọc topping"><button class="is-active" type="button">Tất cả <span>4</span></button><button type="button">Đang bán <span>3</span></button><button type="button">Tạm hết <span>1</span></button></div>
+                </div>
+                <div class="topping-table-wrap">
+                    <table class="topping-table">
+                        <thead><tr><th>Topping</th><th>Giá thêm</th><th>Định lượng kho / phần</th><th>Áp dụng cho</th><th>Trạng thái</th><th></th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="topping-item"><img src="./public/image/topping-black-pearls.webp" alt="Trân châu đen" /><span><strong>Trân châu đen</strong><small>Hạt dai · topping đồ uống</small></span></div></td>
+                                <td class="topping-price">8.000 ₫</td><td>30 g <small>Trân châu đen</small></td><td>Trà, cà phê, sữa chua</td><td><span class="topping-status available">Đang bán</span></td><td><a class="topping-edit" href="create-topping.html">Sửa</a></td>
+                            </tr>
+                            <tr>
+                                <td><div class="topping-item"><img src="./public/image/topping-peach-jelly.webp" alt="Thạch đào" /><span><strong>Thạch đào</strong><small>Thạch trái cây · vị đào</small></span></div></td>
+                                <td class="topping-price">7.000 ₫</td><td>40 g <small>Thạch đào</small></td><td>Trà trái cây, trà sữa</td><td><span class="topping-status available">Đang bán</span></td><td><a class="topping-edit" href="create-topping.html">Sửa</a></td>
+                            </tr>
+                            <tr>
+                                <td><div class="topping-item"><img src="./public/image/topping-cheese-foam.webp" alt="Kem cheese" /><span><strong>Kem cheese</strong><small>Kem sữa mặn · pha chế</small></span></div></td>
+                                <td class="topping-price">12.000 ₫</td><td>25 g <small>Kem cheese</small></td><td>Trà, cà phê đá xay</td><td><span class="topping-status available">Đang bán</span></td><td><a class="topping-edit" href="create-topping.html">Sửa</a></td>
+                            </tr>
+                            <tr>
+                                <td><div class="topping-item"><img src="./public/image/topping-egg-pudding.webp" alt="Pudding trứng" /><span><strong>Pudding trứng</strong><small>Món mềm lạnh · tráng miệng</small></span></div></td>
+                                <td class="topping-price">8.000 ₫</td><td>1 phần <small>Pudding trứng</small></td><td>Trà sữa, món tráng miệng</td><td><span class="topping-status paused">Tạm hết</span></td><td><a class="topping-edit" href="create-topping.html">Sửa</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="topping-footnote"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Topping được chọn riêng cho từng ly trong màn hình bán hàng. Giá thêm được cộng vào giá món.</p>
+            </section>
+        </div>
+    </main>
+</div>
+</body>
+</html>

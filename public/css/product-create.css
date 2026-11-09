@@ -130,6 +130,7 @@ body.page-create-product .recipe-stock { display: inline-flex; padding: 5px 8px;
 body.page-create-product .recipe-remove { width: 32px; height: 32px; border: 0; border-radius: 8px; background: #fff2ef; color: #a9584c; cursor: pointer; }
 body.page-create-product .recipe-add-button { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; margin-top: 13px; padding: 0 12px; border: 1px solid #d5e5d8; border-radius: 9px; background: #f6faf6; color: #286b40; font: 700 14px 'Quicksand',Arial,sans-serif; cursor: pointer; }
 body.page-create-product .recipe-add-button:hover { background: #eaf4eb; }
+body.page-create-product a.recipe-add-button { text-decoration: none; }
 body.page-create-product .recipe-note { display: flex; align-items: flex-start; gap: 8px; margin: 13px 0 0; color: #738478; font-size: 13px; line-height: 1.45; }
 body.page-create-product .recipe-note i { margin-top: 3px; color: #4c875b; }
 body.page-create-product .topping-settings { display: grid; grid-template-columns: minmax(0,1fr) 180px; align-items: center; gap: 12px; margin-bottom: 14px; }
