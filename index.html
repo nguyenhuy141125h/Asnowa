@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Tổng quan</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/dashboard-home.css?v=20261109-category-colors-v2" />
+        <script defer src="./public/js/app.js?v=20261109-revenue-bars-v2"></script>
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261105-management-forms-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+        <link rel="stylesheet" href="./public/css/chart-hover.css?v=20261109-v1" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v3-stock-alerts" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+</head>
+    <body class="home-dashboard">
+        <div class="dashboard-shell home-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html" aria-label="SNOWA trang chủ"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav" aria-label="Điều hướng chính">
+                    <a
+                        class="nav-link active"
+                        href="index.html"
+                        aria-current="page"
+                        ><i class="fa-solid fa-chart-pie"></i
+                        ><span>Tổng quan</span></a
+                    >
+                    <a class="nav-link" href="sales.html"
+                        ><i class="fa-solid fa-cash-register"></i
+                        ><span>Bán hàng (POS)</span></a
+                    >
+                    <a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt"></i
+                        ><span>Đơn hàng</span></a
+                    >
+                    <a class="nav-link" href="tables.html"
+                        ><i class="fa-solid fa-table-cells-large"></i
+                        ><span>Sơ đồ bàn</span></a
+                    >
+                    <a class="nav-link" href="products.html"
+                        ><i class="fa-solid fa-mug-hot"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a>
+                    <a class="nav-link" href="inventory.html"
+                        ><i class="fa-solid fa-boxes-stacked"></i
+                        ><span>Kho hàng</span></a
+                    >
+                    <a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users"></i
+                        ><span>Khách hàng</span></a
+                    >
+                    <a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags"></i
+                        ><span>Khuyến mãi</span></a
+                    >
+                    <a class="nav-link" href="reports.html"
+                        ><i class="fa-solid fa-chart-column"></i
+                        ><span>Báo cáo</span></a
+                    >
+                    <a class="nav-link" href="staff.html"
+                        ><i class="fa-solid fa-user-group"></i
+                        ><span>Nhân viên</span></a
+                    >
+                    <a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+
+            <main class="main-area">
+                <header class="topbar">
+                    <div class="home-welcome">
+                        <strong
+                            >Xin chào, Admin
+                            <span aria-hidden="true">👋</span></strong
+                        ><small>Chúc bạn một ngày làm việc hiệu quả!</small>
+                    </div>
+                    <div class="home-top-actions">
+                        <span class="store-open"
+                            ><i class="fa-solid fa-circle"></i> Cửa hàng đang
+                            mở</span
+                        ><button
+                            class="icon-button home-bell"
+                            aria-label="Thông báo"
+                        >
+                            <i class="fa-regular fa-bell"></i
+                            ><i class="bell-dot"></i></button
+                        ><button class="home-admin">
+                            <span class="admin-monogram">A</span
+                            ><span
+                                ><strong>Admin</strong
+                                ><small>Quản trị viên</small></span
+                            ><i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="home-content">
+                    <div class="home-title-row app-page-heading">
+                        <div>
+                            </h1>
+                            <p>
+                                Tình hình kinh doanh của cửa hàng trong tuần
+                                này.
+                            </p>
+                        </div>
+                        <button class="home-date">
+                            <i class="fa-regular fa-calendar"></i
+                            ><span>01/11/2026 – 07/11/2026</span
+                            ><i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <section class="home-metrics" aria-label="Chỉ số tổng quan">
+                        <article class="home-metric">
+                            <span class="home-metric-icon green"
+                                ><i class="fa-solid fa-coins"></i
+                            ></span>
+                            <div>
+                                <small>Doanh thu</small
+                                ><strong>86.450.000 <em>₫</em></strong
+                                ><span class="metric-change"
+                                    ><i class="fa-solid fa-arrow-trend-up"></i>
+                                    +12% <small>so với kỳ trước</small></span
+                                >
+                            </div>
+                            <span class="metric-wave wave-green"></span>
+                        </article>
+                        <article class="home-metric">
+                            <span class="home-metric-icon lime"
+                                ><i class="fa-solid fa-cart-shopping"></i
+                            ></span>
+                            <div>
+                                <small>Đơn hàng</small><strong>1.264</strong
+                                ><span class="metric-change"
+                                    ><i class="fa-solid fa-arrow-trend-up"></i>
+                                    +10% <small>so với kỳ trước</small></span
+                                >
+                            </div>
+                            <span class="metric-wave wave-lime"></span>
+                        </article>
+                        <article class="home-metric">
+                            <span class="home-metric-icon pale"
+                                ><i class="fa-solid fa-users"></i
+                            ></span>
+                            <div>
+                                <small>Khách hàng</small><strong>98</strong
+                                ><span class="metric-change"
+                                    ><i class="fa-solid fa-arrow-trend-up"></i>
+                                    +5% <small>so với kỳ trước</small></span
+                                >
+                            </div>
+                            <span class="metric-wave wave-green"></span>
+                        </article>
+                        <article class="home-metric">
+                            <span class="home-metric-icon gold"
+                                ><i class="fa-regular fa-star"></i
+                            ></span>
+                            <div>
+                                <small>Điểm tích lũy</small
+                                ><strong>4.520</strong
+                                ><span class="metric-change"
+                                    ><i class="fa-solid fa-arrow-trend-up"></i>
+                                    +9% <small>so với kỳ trước</small></span
+                                >
+                            </div>
+                            <span class="metric-wave wave-gold"></span>
+                        </article>
+                    </section>
+
+                    <section class="home-main-grid">
+                        <article class="home-panel revenue-panel">
+                            <div class="home-panel-head">
+                                <div>
+                                    <h2>Doanh thu 7 ngày gần nhất</h2>
+                                    <p>Doanh thu theo ngày · triệu đồng</p>
+                                </div>
+                                <a href="reports.html"
+                                    >Chi tiết
+                                    <i class="fa-solid fa-arrow-right"></i
+                                ></a>
+                            </div>
+                            <div
+                                class="revenue-chart"
+                                role="group"
+                                aria-label="Doanh thu theo ngày trong 7 ngày gần nhất, đơn vị triệu đồng"
+                            >
+                                <div class="chart-y-labels">
+                                    <span>20M</span><span>15M</span
+                                    ><span>10M</span><span>5M</span
+                                    ><span>0</span>
+                                </div>
+                                <div class="chart-plot">
+                                    <div class="chart-grid-lines">
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                    </div>
+                                    <div class="revenue-bars" role="group" aria-label="Doanh thu hàng ngày">
+                                        <button class="revenue-bar" type="button" style="--bar-height:23%" aria-label="01/11 · 4,6 triệu đồng" data-date="01/11" data-value="4,6 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                        <button class="revenue-bar" type="button" style="--bar-height:39%" aria-label="02/11 · 7,8 triệu đồng" data-date="02/11" data-value="7,8 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                        <button class="revenue-bar" type="button" style="--bar-height:52%" aria-label="03/11 · 10,4 triệu đồng" data-date="03/11" data-value="10,4 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                        <button class="revenue-bar" type="button" style="--bar-height:45.5%" aria-label="04/11 · 9,1 triệu đồng" data-date="04/11" data-value="9,1 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                        <button class="revenue-bar" type="button" style="--bar-height:71%" aria-label="05/11 · 14,2 triệu đồng" data-date="05/11" data-value="14,2 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                        <button class="revenue-bar" type="button" style="--bar-height:60.5%" aria-label="06/11 · 12,1 triệu đồng" data-date="06/11" data-value="12,1 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                        <button class="revenue-bar" type="button" style="--bar-height:91.5%" aria-label="07/11 · 18,3 triệu đồng" data-date="07/11" data-value="18,3 triệu ₫"><span class="revenue-bar-fill"></span></button>
+                                    </div>
+                                    <div class="chart-tooltip" data-chart-tooltip aria-hidden="true">
+                                        <span data-chart-tooltip-date></span>
+                                        <strong data-chart-tooltip-value></strong>
+                                    </div>
+                                    <div class="chart-x-labels">
+                                        <span>01/11</span><span>02/11</span
+                                        ><span>03/11</span><span>04/11</span
+                                        ><span>05/11</span><span>06/11</span
+                                        ><span>07/11</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="home-panel category-panel">
+                            <div class="home-panel-head">
+                                <div>
+                                    <h2>Tỷ lệ doanh thu theo danh mục</h2>
+                                    <p>Cơ cấu doanh thu tuần này</p>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <div class="category-donut">
+                                    <svg class="donut-chart" viewBox="0 0 100 100" role="img" aria-label="Tỷ trọng doanh thu theo danh mục">
+                                        <circle class="coffee" cx="50" cy="50" r="39" stroke-dasharray="110.27 245.04" stroke-dashoffset="0" tabindex="0"><title>Cà phê · 45% doanh thu</title></circle>
+                                        <circle class="tea" cx="50" cy="50" r="39" stroke-dasharray="68.61 245.04" stroke-dashoffset="-110.27" tabindex="0"><title>Trà · 28% doanh thu</title></circle>
+                                        <circle class="bingsu" cx="50" cy="50" r="39" stroke-dasharray="41.66 245.04" stroke-dashoffset="-178.88" tabindex="0"><title>Bingsu · 17% doanh thu</title></circle>
+                                        <circle class="cake" cx="50" cy="50" r="39" stroke-dasharray="24.50 245.04" stroke-dashoffset="-220.54" tabindex="0"><title>Bánh · 10% doanh thu</title></circle>
+                                    </svg>
+                                    <div>
+                                        <strong>86,45M</strong
+                                        ><small>Doanh thu</small>
+                                    </div>
+                                </div>
+                                <div class="category-legend">
+                                    <div>
+                                        <i class="dot-coffee"></i
+                                        ><span>Cà phê</span><b>45%</b>
+                                    </div>
+                                    <div>
+                                        <i class="dot-tea"></i><span>Trà</span
+                                        ><b>28%</b>
+                                    </div>
+                                    <div>
+                                        <i class="dot-bingsu"></i
+                                        ><span>Bingsu</span><b>17%</b>
+                                    </div>
+                                    <div>
+                                        <i class="dot-cake"></i><span>Bánh</span
+                                        ><b>10%</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="home-panel best-panel">
+                            <div class="home-panel-head">
+                                <div>
+                                    <h2>Sản phẩm bán chạy</h2>
+                                    <p>Trong tuần này</p>
+                                </div>
+                                <a href="products.html"
+                                    >Xem tất cả
+                                    <i class="fa-solid fa-arrow-right"></i
+                                ></a>
+                            </div>
+                            <div class="best-list">
+                                <div class="best-row">
+                                    <span class="rank rank-first">1</span
+                                    ><img
+                                        src="./public/image/matcha-v2.webp"
+                                        alt="Matcha Latte"
+                                    /><strong>Matcha Latte</strong
+                                    ><b>328 <small>ly</small></b>
+                                </div>
+                                <div class="best-row">
+                                    <span class="rank rank-second">2</span
+                                    ><span
+                                        class="best-sprite bingsu"
+                                        role="img"
+                                        aria-label="Bingsu xoài"
+                                    ></span
+                                    ><strong>Bingsu xoài</strong
+                                    ><b>274 <small>phần</small></b>
+                                </div>
+                                <div class="best-row">
+                                    <span class="rank rank-third">3</span
+                                    ><img
+                                        src="./public/image/milk-tea.webp"
+                                        alt="Cà phê sữa dừa"
+                                    /><strong>Cà phê sữa dừa</strong
+                                    ><b>219 <small>ly</small></b>
+                                </div>
+                                <div class="best-row">
+                                    <span class="rank">4</span
+                                    ><span
+                                        class="best-sprite tiramisu"
+                                        role="img"
+                                        aria-label="Tiramisu"
+                                    ></span
+                                    ><strong>Tiramisu</strong
+                                    ><b>186 <small>phần</small></b>
+                                </div>
+                                <div class="best-row">
+                                    <span class="rank">5</span
+                                    ><img
+                                        src="./public/image/strawberry-yogurt.webp"
+                                        alt="Trà đào cam sả"
+                                    /><strong>Trà đào cam sả</strong
+                                    ><b>175 <small>ly</small></b>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="home-lower-grid">
+                        <article class="home-panel table-panel">
+                            <div class="home-panel-head">
+                                <div>
+                                    <h2>Trạng thái bàn</h2>
+                                    <p>Tình trạng phục vụ hiện tại</p>
+                                </div>
+                                <a href="tables.html"
+                                    >Sơ đồ bàn
+                                    <i class="fa-solid fa-arrow-right"></i
+                                ></a>
+                            </div>
+                            <div class="table-stats">
+                                <div class="table-stat vacant">
+                                    <i class="fa-solid fa-chair"></i
+                                    ><span>Trống</span
+                                    ><strong>6 <small>bàn</small></strong>
+                                </div>
+                                <div class="table-stat serving">
+                                    <i class="fa-solid fa-users"></i
+                                    ><span>Đang phục vụ</span
+                                    ><strong>8 <small>bàn</small></strong>
+                                </div>
+                                <div class="table-stat booked">
+                                    <i class="fa-regular fa-calendar-check"></i
+                                    ><span>Đã đặt</span
+                                    ><strong>2 <small>bàn</small></strong>
+                                </div>
+                                <div class="table-stat cleaning">
+                                    <i class="fa-regular fa-clock"></i
+                                    ><span>Cần dọn</span
+                                    ><strong>1 <small>bàn</small></strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="home-panel home-stock-panel">
+                            <div class="home-panel-head">
+                                <div>
+                                    <h2>Cảnh báo kho</h2>
+                                    <p>Nguyên liệu cần bổ sung</p>
+                                </div>
+                                <a href="inventory.html"
+                                    >Quản lý kho
+                                    <i class="fa-solid fa-arrow-right"></i
+                                ></a>
+                            </div>
+                            <div class="home-stock-summary">
+                                <div class="home-stock-count is-low">
+                                    <strong>8</strong><span>Sắp hết hàng</span>
+                                </div>
+                                <div class="home-stock-count is-out">
+                                    <strong>2</strong><span>Đã hết hàng</span>
+                                </div>
+                            </div>
+                            <div class="home-stock-list">
+                                <a class="home-stock-row" href="inventory.html">
+                                    <span class="home-stock-info">
+                                        <strong>Đào ngâm</strong>
+                                        <small>Tồn 5 hũ <i>·</i> Định mức 5</small>
+                                    </span>
+                                    <span class="home-stock-status">Sắp hết</span>
+                                </a>
+                                <a class="home-stock-row" href="inventory.html">
+                                    <span class="home-stock-info">
+                                        <strong>Trân châu đen</strong>
+                                        <small>Tồn 2 kg <i>·</i> Định mức 3 kg</small>
+                                    </span>
+                                    <span class="home-stock-status">Sắp hết</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="home-promo">
+                            <img
+                                src="./public/image/matcha-v2.webp"
+                                alt="Ly matcha SNOWA"
+                            />
+                            <div class="promo-overlay"></div>
+                            <div class="promo-copy">
+                                <span>SNOWA · ƯU ĐÃI THÁNG 11</span>
+                                <h2>Hẹn nhau một chút</h2>
+                                <strong>Giảm 10%</strong>
+                                <p>cho hóa đơn từ 100.000 ₫</p>
+                                <a href="promotions-admin.html"
+                                    >Quản lý khuyến mãi
+                                    <i class="fa-solid fa-arrow-right"></i
+                                ></a>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

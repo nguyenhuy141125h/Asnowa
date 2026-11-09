@@ -1,0 +1,96 @@
+body.page-promotions .promo-page { display: grid; gap: 22px; max-width: 1500px; margin: 0 auto; }
+body.page-promotions .promo-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 4px 0 20px; border-bottom: 1px solid #e9dfdf; }
+body.page-promotions .promo-eyebrow { color: #9c6572; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+body.page-promotions .promo-title-line { display: flex; align-items: center; gap: 13px; margin: 8px 0 4px; }
+body.page-promotions .promo-title-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: #f7e9ed; color: #a95870; font-size: 20px; }
+body.page-promotions .promo-title-line h1 { margin: 0; color: #193d27; font: 800 30px/1.2 'Montserrat',Arial,sans-serif; letter-spacing: -.04em; }
+body.page-promotions .promo-heading-copy p { margin: 5px 0 0; color: #758178; font-size: 15px; }
+body.page-promotions .promo-create { min-height: 46px !important; padding: 0 19px !important; border-color: #a95870 !important; border-radius: 10px !important; background: #a95870 !important; box-shadow: 0 7px 18px rgba(169,88,112,.16) !important; font-size: 14px !important; }
+body.page-promotions .promo-create:hover { background: #91465d !important; }
+body.page-promotions .promo-summary { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 13px; }
+body.page-promotions .promo-summary-card { min-height: 105px; display: flex; align-items: center; gap: 13px; padding: 16px; border: 1px solid #eadfe1; border-radius: 13px; background: #fff; box-shadow: 0 5px 18px rgba(58,42,43,.035); }
+body.page-promotions .promo-summary-icon { width: 43px; height: 43px; flex: 0 0 43px; display: grid; place-items: center; border-radius: 12px; font-size: 17px; }
+body.page-promotions .promo-summary-icon.all { background: #f7e9ed; color: #a95870; }
+body.page-promotions .promo-summary-icon.active { background: #e8f4eb; color: #287846; }
+body.page-promotions .promo-summary-icon.upcoming { background: #fff2df; color: #b87522; }
+body.page-promotions .promo-summary-icon.usage { background: #eeeafa; color: #7660a8; }
+body.page-promotions .promo-summary-value { display: grid; gap: 3px; min-width: 0; }
+body.page-promotions .promo-summary-value small { color: #77847b; font-size: 12px; white-space: nowrap; }
+body.page-promotions .promo-summary-value strong { color: #203b2a; font: 800 23px/1.1 'Montserrat',Arial,sans-serif; }
+body.page-promotions .summary-note { margin-left: auto; color: #89938b; font-size: 11px; text-align: right; }
+body.page-promotions .summary-note.positive { color: #32804d; }
+body.page-promotions .promo-workspace { padding: 22px; border: 1px solid #e3e9e4; border-radius: 16px; background: #fff; box-shadow: 0 8px 26px rgba(35,58,41,.045); }
+body.page-promotions .promo-workspace-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 17px; }
+body.page-promotions .promo-workspace-heading h2 { margin: 0 0 4px; color: #203a2b; font: 750 19px/1.3 'Montserrat',Arial,sans-serif; }
+body.page-promotions .promo-workspace-heading p { margin: 0; color: #7e8981; font-size: 13px; }
+body.page-promotions .promo-total { padding: 7px 10px; border-radius: 8px; background: #f8eef1; color: #98566a; font-size: 12px; font-weight: 700; white-space: nowrap; }
+body.page-promotions .promo-total i { margin-right: 5px; font-size: 8px; }
+body.page-promotions .promo-toolbar { display: grid; grid-template-columns: auto minmax(190px,1fr) 190px; align-items: center; gap: 10px; margin-bottom: 18px; }
+body.page-promotions .promo-tabs { display: flex; gap: 3px; padding: 4px; border: 1px solid #ece4e4; border-radius: 10px; background: #f8f7f5; }
+body.page-promotions .promo-tabs button { min-height: 37px; display: inline-flex; align-items: center; gap: 7px; padding: 0 12px; border: 0; border-radius: 7px; background: transparent; color: #67746c; font: 700 12px 'Quicksand',Arial,sans-serif; white-space: nowrap; }
+body.page-promotions .promo-tabs button.active { background: #a95870; color: #fff; box-shadow: 0 3px 8px rgba(169,88,112,.17); }
+body.page-promotions .promo-tabs button span { min-width: 18px; padding: 2px 4px; border-radius: 10px; background: rgba(255,255,255,.2); text-align: center; }
+body.page-promotions .promo-search,.page-promotions .promo-status-filter { height: 43px; border: 1px solid #e2e8e3; border-radius: 9px; background: #fff; color: #52645a; }
+body.page-promotions .promo-search { display: flex; align-items: center; gap: 9px; padding: 0 12px; }
+body.page-promotions .promo-search i { color: #8b998f; font-size: 13px; }
+body.page-promotions .promo-search input { width: 100%; min-width: 0; border: 0; outline: 0; color: #34483a; font: 13px 'Quicksand',Arial,sans-serif; }
+body.page-promotions .promo-search input::placeholder { color: #a2aaa4; }
+body.page-promotions .promo-status-filter { padding: 0 12px; font: 700 12px 'Quicksand',Arial,sans-serif; }
+body.page-promotions .promo-cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+body.page-promotions .promotion-card { --promo-color:#a95870; --promo-soft:#fbf0f3; position: relative; min-width: 0; overflow: hidden; padding: 18px 19px 0; border: 1px solid #e8e5e1; border-radius: 13px; background: linear-gradient(145deg,#fff 0%,#fff 76%,var(--promo-soft) 160%); transition: border-color .18s,box-shadow .18s,transform .18s; }
+body.page-promotions .promotion-card:hover { transform: translateY(-2px); border-color: color-mix(in srgb,var(--promo-color) 35%,white); box-shadow: 0 10px 24px rgba(48,45,39,.08); }
+body.page-promotions .points-card { --promo-color:#7660a8; --promo-soft:#f1eef9; }
+body.page-promotions .birthday-card { --promo-color:#b87522; --promo-soft:#fff4e4; }
+body.page-promotions .combo-card { --promo-color:#37805d; --promo-soft:#eef7f0; }
+body.page-promotions .promotion-topline,.page-promotions .promotion-meta,.page-promotions .promotion-offer { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+body.page-promotions .promotion-kind { color: var(--promo-color); font-size: 11px; font-weight: 800; letter-spacing: .035em; }
+body.page-promotions .promotion-kind i { margin-right: 5px; }
+body.page-promotions .promotion-state { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border-radius: 20px; background: #eaf5ec; color: #2b7546; font-size: 11px; font-weight: 700; white-space: nowrap; }
+body.page-promotions .promotion-state i { width: 7px; height: 7px; border-radius: 50%; background: #48a36a; }
+body.page-promotions .promotion-state.is-upcoming { background: #fff3df; color: #a66818; }
+body.page-promotions .promotion-state.is-upcoming i { background: #d9963f; }
+body.page-promotions .promotion-main { display: flex; align-items: center; gap: 13px; margin: 17px 0 15px; }
+body.page-promotions .promotion-icon { width: 45px; height: 45px; flex: 0 0 45px; display: grid; place-items: center; border-radius: 12px; background: var(--promo-soft); color: var(--promo-color); font-size: 19px; }
+body.page-promotions .promotion-main h3 { margin: 0 0 4px; color: #25392d; font: 750 16px/1.3 'Montserrat',Arial,sans-serif; }
+body.page-promotions .promotion-main p { margin: 0; color: #7b877f; font-size: 13px; }
+body.page-promotions .promotion-offer { justify-content: flex-start; min-height: 52px; padding: 8px 0; border-top: 1px solid #f0ece8; }
+body.page-promotions .promotion-offer strong { color: var(--promo-color); font: 800 21px/1 'Montserrat',Arial,sans-serif; }
+body.page-promotions .promotion-offer>span:nth-child(2) { color: #68776d; font-size: 12px; }
+body.page-promotions .promotion-code { margin-left: auto; padding: 5px 8px; border: 1px dashed color-mix(in srgb,var(--promo-color) 35%,white); border-radius: 6px; color: var(--promo-color); font-size: 10px; font-weight: 800; }
+body.page-promotions .promotion-meta { justify-content: flex-start; gap: 0; margin: 0 -19px; padding: 11px 19px 13px; border-top: 1px solid #f0ece8; background: rgba(249,249,247,.72); }
+body.page-promotions .promotion-meta>span { display: grid; gap: 3px; min-width: 0; flex: 1; }
+body.page-promotions .promotion-meta>span+span { padding-left: 14px; border-left: 1px solid #e8e8e2; }
+body.page-promotions .promotion-meta small { color: #89938c; font-size: 10px; }
+body.page-promotions .promotion-meta b { overflow: hidden; color: #4a5a4e; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 1120px) {
+  body.page-promotions .promo-summary { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  body.page-promotions .promo-toolbar { grid-template-columns: 1fr 190px; }
+  body.page-promotions .promo-tabs { grid-column: 1/-1; width: max-content; max-width: 100%; overflow-x: auto; }
+}
+@media (max-width: 700px) {
+  body.page-promotions .promo-page { gap: 15px; }
+  body.page-promotions .promo-heading { align-items: flex-start; flex-direction: column; gap: 13px; padding-bottom: 15px; }
+  body.page-promotions .promo-title-icon { width: 40px; height: 40px; border-radius: 11px; font-size: 17px; }
+  body.page-promotions .promo-title-line h1 { font-size: 25px; }
+  body.page-promotions .promo-heading-copy p { font-size: 13px; }
+  body.page-promotions .promo-create { width: 100%; }
+  body.page-promotions .promo-summary { gap: 8px; }
+  body.page-promotions .promo-summary-card { min-height: 84px; gap: 8px; padding: 10px; flex-wrap: wrap; }
+  body.page-promotions .promo-summary-icon { width: 34px; height: 34px; flex-basis: 34px; font-size: 14px; }
+  body.page-promotions .promo-summary-value small { font-size: 10px; }
+  body.page-promotions .promo-summary-value strong { font-size: 19px; }
+  body.page-promotions .summary-note { display: none; }
+  body.page-promotions .promo-workspace { padding: 14px; }
+  body.page-promotions .promo-workspace-heading { align-items: flex-start; }
+  body.page-promotions .promo-workspace-heading h2 { font-size: 16px; }
+  body.page-promotions .promo-total { font-size: 10px; }
+  body.page-promotions .promo-toolbar { grid-template-columns: 1fr; }
+  body.page-promotions .promo-tabs { grid-column: auto; width: 100%; }
+  body.page-promotions .promo-tabs button { flex: 1 0 auto; justify-content: center; padding: 0 9px; }
+  body.page-promotions .promo-status-filter { width: 100%; }
+  body.page-promotions .promo-cards { grid-template-columns: 1fr; gap: 10px; }
+  body.page-promotions .promotion-card { padding: 14px 13px 0; }
+  body.page-promotions .promotion-main { margin: 13px 0; }
+  body.page-promotions .promotion-main h3 { font-size: 14px; }
+  body.page-promotions .promotion-meta { margin: 0 -13px; padding: 10px 13px; }
+}

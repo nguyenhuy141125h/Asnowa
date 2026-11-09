@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Quản lý nhân viên</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/staff.css?v=20261109-status-v2" />
+        <script defer src="./public/js/app.js"></script>
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261105-management-forms-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+</head>
+    <body class="staff-dashboard">
+        <div class="dashboard-shell staff-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html" aria-label="SNOWA trang chủ"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav" aria-label="Điều hướng chính">
+                    <a class="nav-link" href="index.html"
+                        ><i class="fa-solid fa-chart-pie"></i
+                        ><span>Tổng quan</span></a
+                    >
+                    <a class="nav-link" href="sales.html"
+                        ><i class="fa-solid fa-cash-register"></i
+                        ><span>Bán hàng (POS)</span></a
+                    >
+                    <a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt"></i
+                        ><span>Đơn hàng</span></a
+                    >
+                    <a class="nav-link" href="tables.html"
+                        ><i class="fa-solid fa-table-cells-large"></i
+                        ><span>Sơ đồ bàn</span></a
+                    >
+                    <a class="nav-link" href="products.html"
+                        ><i class="fa-solid fa-mug-hot"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a>
+                    <a class="nav-link" href="inventory.html"
+                        ><i class="fa-solid fa-boxes-stacked"></i
+                        ><span>Kho hàng</span></a
+                    >
+                    <a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users"></i
+                        ><span>Khách hàng</span></a
+                    >
+                    <a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags"></i
+                        ><span>Khuyến mãi</span></a
+                    >
+                    <a class="nav-link" href="reports.html"
+                        ><i class="fa-solid fa-chart-column"></i
+                        ><span>Báo cáo</span></a
+                    >
+                    <a
+                        class="nav-link active"
+                        href="staff.html"
+                        aria-current="page"
+                        ><i class="fa-solid fa-user-group"></i
+                        ><span>Nhân viên</span></a
+                    >
+                    <a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+
+            <main class="main-area">
+                <header class="topbar">
+                    <div class="welcome">
+                        <strong
+                            >Xin chào, Admin
+                            <span aria-hidden="true">ðŸ‘‹</span></strong
+                        ><small>Chúc bạn một ngày làm việc hiệu quả!</small>
+                    </div>
+                    <div class="topbar-actions">
+                        <button
+                            class="icon-button notification-button"
+                            aria-label="Thông báo"
+                        >
+                            <i class="fa-regular fa-bell"></i
+                            ><i class="notification-dot"></i>
+                        </button>
+                        <div class="admin-profile">
+                            <span class="admin-photo">A</span
+                            ><span
+                                ><strong>Admin</strong
+                                ><small>Quản trị viên</small></span
+                            ><i
+                                class="fa-solid fa-chevron-down profile-chevron"
+                            ></i>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="page-content staff-content">
+                    <div class="staff-title-row app-page-heading">
+                        <div>
+                            
+                            <h1><i class="fa-solid fa-user-group" aria-hidden="true"></i><span>Quản lý nhân viên</span></h1>
+                            <p>Theo dõi nhân viên và lịch làm việc tại cửa hàng.</p>
+                        </div>
+                        <a
+                            class="button-primary staff-add"
+                            href="#"
+                            data-open-dialog="staff-dialog"
+                            ><i class="fa-solid fa-plus"></i> Thêm nhân viên</a
+                        >
+                    </div>
+
+                    <div class="staff-toolbar">
+                        <div
+                            class="staff-tabs"
+                            role="tablist"
+                            aria-label="Quản lý nhân viên"
+                        >
+                            <button
+                                class="staff-tab active"
+                                role="tab"
+                                aria-selected="true"
+                                data-tab="roster"
+                            >
+                                Danh sách nhân viên
+                            </button>
+                            <button
+                                class="staff-tab"
+                                role="tab"
+                                aria-selected="false"
+                                data-tab="shifts"
+                            >
+                                Phân ca làm việc
+                            </button>
+                            <button
+                                class="staff-tab"
+                                role="tab"
+                                aria-selected="false"
+                                data-tab="attendance"
+                            >
+                                Chấm công
+                            </button>
+                            <button
+                                class="staff-tab"
+                                role="tab"
+                                aria-selected="false"
+                                data-tab="roles"
+                            >
+                                Vai trò &amp; quyền hạn
+                            </button>
+                        </div>
+                    </div>
+
+                    <section class="staff-kpis" aria-label="Thống kê nhân viên">
+                        <article class="staff-kpi">
+                            <span class="kpi-icon green"
+                                ><i class="fa-solid fa-users"></i></span
+                            ><span class="kpi-copy"
+                                ><small>Tổng nhân viên</small
+                                ><strong>12</strong></span
+                            >
+                        </article>
+                        <article class="staff-kpi">
+                            <span class="kpi-icon mint"
+                                ><i class="fa-solid fa-mug-hot"></i></span
+                            ><span class="kpi-copy"
+                                ><small>Đang làm việc</small
+                                ><strong>9</strong></span
+                            >
+                        </article>
+                        <article class="staff-kpi">
+                            <span class="kpi-icon amber"
+                                ><i class="fa-regular fa-calendar"></i></span
+                            ><span class="kpi-copy"
+                                ><small>Hôm nay có ca</small
+                                ><strong>10</strong></span
+                            >
+                        </article>
+                        <article class="staff-kpi">
+                            <span class="kpi-icon coral"
+                                ><i class="fa-regular fa-clock"></i></span
+                            ><span class="kpi-copy"
+                                ><small>Vắng / Nghỉ</small
+                                ><strong>2</strong></span
+                            >
+                        </article>
+                    </section>
+
+                    <div class="staff-layout">
+                        <section
+                            class="staff-list-panel panel"
+                            aria-label="Danh sách nhân viên"
+                        >
+                            <div class="staff-filters">
+                                <label class="staff-search"
+                                    ><i class="fa-solid fa-magnifying-glass"></i
+                                    ><input
+                                        type="search"
+                                        placeholder="Tìm tên, SĐT hoặc mã nhân viên..."
+                                        aria-label="Tìm nhân viên"
+                                /></label>
+                                <label class="select-wrap"
+                                    ><select aria-label="Lọc theo vị trí">
+                                        <option value="">Tất cả vị trí</option>
+                                        <option>Quản lý</option>
+                                        <option>Thu ngân</option>
+                                        <option>Pha chế</option>
+                                        <option>Phục vụ</option></select
+                                    ><i class="fa-solid fa-chevron-down"></i
+                                ></label>
+                                <label class="select-wrap"
+                                    ><select aria-label="Lọc theo trạng thái">
+                                        <option value="">
+                                            Tất cả trạng thái
+                                        </option>
+                                        <option>Đang làm việc</option>
+                                        <option>Nghỉ</option></select
+                                    ><i class="fa-solid fa-chevron-down"></i
+                                ></label>
+                            </div>
+                            <div class="staff-table-scroll">
+                                <table class="staff-table data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã NV</th>
+                                            <th>Họ và tên</th>
+                                            <th>Vị trí</th>
+                                            <th>Ca hôm nay</th>
+                                            <th>SĐT</th>
+                                            <th>Trạng thái</th>
+                                            <th aria-label="Thao tác"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr
+                                            class="selected"
+                                            data-name="Nguyễn Minh Anh"
+                                            data-role="Quản lý"
+                                            data-status="Đang làm việc"
+                                            data-code="NV001"
+                                            data-phone="0901 234 567"
+                                            data-email="minhanh@sn​​owa.vn"
+                                            data-start="01/06/2026"
+                                        >
+                                            <td>NV001</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-1"
+                                                        >MA</span
+                                                    ><b>Nguyễn Minh Anh</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-manager"
+                                                    >Quản lý</span
+                                                >
+                                            </td>
+                                            <td>08:00 – 17:00</td>
+                                            <td>0901 234 567</td>
+                                            <td>
+                                                <span
+                                                    class="status-pill is-working"
+                                                    >Đang làm việc</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Nguyễn Minh Anh"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Nguyễn Minh Anh"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            data-name="Trần Gia Bảo"
+                                            data-role="Thu ngân"
+                                            data-status="Đang làm việc"
+                                            data-code="NV002"
+                                            data-phone="0932 456 789"
+                                            data-email="giabao@sn​​owa.vn"
+                                            data-start="12/06/2026"
+                                        >
+                                            <td>NV002</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-2"
+                                                        >GB</span
+                                                    ><b>Trần Gia Bảo</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-cashier"
+                                                    >Thu ngân</span
+                                                >
+                                            </td>
+                                            <td>08:00 – 16:00</td>
+                                            <td>0932 456 789</td>
+                                            <td>
+                                                <span
+                                                    class="status-pill is-working"
+                                                    >Đang làm việc</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Trần Gia Bảo"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Trần Gia Bảo"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            data-name="Lê Hoàng Yến"
+                                            data-role="Pha chế"
+                                            data-status="Đang làm việc"
+                                            data-code="NV003"
+                                            data-phone="0987 654 321"
+                                            data-email="hoangyen@sn​​owa.vn"
+                                            data-start="18/06/2026"
+                                        >
+                                            <td>NV003</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-3"
+                                                        >HY</span
+                                                    ><b>Lê Hoàng Yến</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-barista"
+                                                    >Pha chế</span
+                                                >
+                                            </td>
+                                            <td>08:00 – 16:00</td>
+                                            <td>0987 654 321</td>
+                                            <td>
+                                                <span
+                                                    class="status-pill is-working"
+                                                    >Đang làm việc</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Lê Hoàng Yến"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Lê Hoàng Yến"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            data-name="Phạm Quỳnh Như"
+                                            data-role="Phục vụ"
+                                            data-status="Đang làm việc"
+                                            data-code="NV004"
+                                            data-phone="0912 345 678"
+                                            data-email="quynhnhu@sn​​owa.vn"
+                                            data-start="20/06/2026"
+                                        >
+                                            <td>NV004</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-4"
+                                                        >QN</span
+                                                    ><b>Phạm Quỳnh Như</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-service"
+                                                    >Phục vụ</span
+                                                >
+                                            </td>
+                                            <td>13:00 – 21:00</td>
+                                            <td>0912 345 678</td>
+                                            <td>
+                                                <span
+                                                    class="status-pill is-working"
+                                                    >Đang làm việc</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Phạm Quỳnh Như"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Phạm Quỳnh Như"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            data-name="Đỗ Thanh Huy"
+                                            data-role="Phục vụ"
+                                            data-status="Đang làm việc"
+                                            data-code="NV005"
+                                            data-phone="0909 888 777"
+                                            data-email="thanhhuy@sn​​owa.vn"
+                                            data-start="02/07/2026"
+                                        >
+                                            <td>NV005</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-5"
+                                                        >TH</span
+                                                    ><b>Đỗ Thanh Huy</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-service"
+                                                    >Phục vụ</span
+                                                >
+                                            </td>
+                                            <td>13:00 – 21:00</td>
+                                            <td>0909 888 777</td>
+                                            <td>
+                                                <span
+                                                    class="status-pill is-working"
+                                                    >Đang làm việc</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Đỗ Thanh Huy"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Đỗ Thanh Huy"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            data-name="Võ Thành Đạt"
+                                            data-role="Pha chế"
+                                            data-status="Nghỉ"
+                                            data-code="NV006"
+                                            data-phone="0977 666 555"
+                                            data-email="thanhdat@sn​​owa.vn"
+                                            data-start="15/07/2026"
+                                        >
+                                            <td>NV006</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-6"
+                                                        >TĐ</span
+                                                    ><b>Võ Thành Đạt</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-barista"
+                                                    >Pha chế</span
+                                                >
+                                            </td>
+                                            <td>—</td>
+                                            <td>0977 666 555</td>
+                                            <td>
+                                                <span class="status-pill is-off"
+                                                    >Nghỉ</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Võ Thành Đạt"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Võ Thành Đạt"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            data-name="Bùi Thảo Vy"
+                                            data-role="Thu ngân"
+                                            data-status="Nghỉ"
+                                            data-code="NV007"
+                                            data-phone="0968 111 222"
+                                            data-email="thaovy@sn​​owa.vn"
+                                            data-start="22/07/2026"
+                                        >
+                                            <td>NV007</td>
+                                            <td>
+                                                <button
+                                                    class="staff-person"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        class="staff-avatar avatar-7"
+                                                        >TV</span
+                                                    ><b>Bùi Thảo Vy</b>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="role-pill role-cashier"
+                                                    >Thu ngân</span
+                                                >
+                                            </td>
+                                            <td>—</td>
+                                            <td>0968 111 222</td>
+                                            <td>
+                                                <span class="status-pill is-off"
+                                                    >Nghỉ</span
+                                                >
+                                            </td>
+                                            <td class="row-actions">
+                                                <button
+                                                    aria-label="Sửa Bùi Thảo Vy"
+                                                >
+                                                    <i
+                                                        class="fa-solid fa-pen"
+                                                    ></i></button
+                                                ><button
+                                                    class="delete-staff"
+                                                    aria-label="Xóa Bùi Thảo Vy"
+                                                >
+                                                    <i
+                                                        class="fa-regular fa-trash-can"
+                                                    ></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-footer">
+                                <span class="row-count"
+                                    >Hiển thị 7 / 12 nhân viên</span
+                                >
+                                <nav class="pagination" aria-label="Phân trang">
+                                    <button aria-label="Trang trước">
+                                        <i
+                                            class="fa-solid fa-chevron-left"
+                                        ></i></button
+                                    ><button class="current">1</button
+                                    ><button>2</button
+                                    ><button aria-label="Trang sau">
+                                        <i
+                                            class="fa-solid fa-chevron-right"
+                                        ></i>
+                                    </button>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <aside
+                            class="staff-detail panel"
+                            aria-label="Thông tin nhân viên"
+                        >
+                            <div class="detail-heading">
+                                <div class="detail-avatar avatar-1">MA</div>
+                                <div class="detail-name">
+                                    <h2>Nguyễn Minh Anh</h2>
+                                    <span>NV001</span
+                                    ><span class="status-pill is-working"
+                                        >Đang làm việc</span
+                                    >
+                                </div>
+                                <button
+                                    class="more-button"
+                                    aria-label="Tùy chọn"
+                                >
+                                    <i
+                                        class="fa-solid fa-ellipsis-vertical"
+                                    ></i>
+                                </button>
+                            </div>
+                            <div class="detail-info">
+                                <div>
+                                    <i class="fa-solid fa-users"></i
+                                    ><span>Vị trí</span
+                                    ><strong class="detail-role"
+                                        >Quản lý</strong
+                                    >
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-phone"></i
+                                    ><span>SĐT</span
+                                    ><strong class="detail-phone"
+                                        >0901 234 567</strong
+                                    >
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-envelope"></i
+                                    ><span>Email</span
+                                    ><strong class="detail-email"
+                                        >minhanh@sn​​owa.vn</strong
+                                    >
+                                </div>
+                                <div>
+                                    <i class="fa-regular fa-calendar"></i
+                                    ><span>Ngày vào làm</span
+                                    ><strong class="detail-start"
+                                        >01/06/2026</strong
+                                    >
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-shield-halved"></i
+                                    ><span>Vai trò</span
+                                    ><strong>Quản lý hệ thống</strong>
+                                </div>
+                            </div>
+                            <section class="week-card">
+                                <h3>
+                                    <i class="fa-regular fa-calendar"></i>Lịch
+                                    làm việc tuần này
+                                </h3>
+                                <div class="week-grid">
+                                    <div class="day today">
+                                        <b>T2</b><span>08:00</span
+                                        ><span>17:00</span>
+                                    </div>
+                                    <div class="day">
+                                        <b>T3</b><span>08:00</span
+                                        ><span>17:00</span>
+                                    </div>
+                                    <div class="day">
+                                        <b>T4</b><span>08:00</span
+                                        ><span>17:00</span>
+                                    </div>
+                                    <div class="day">
+                                        <b>T5</b><span>08:00</span
+                                        ><span>17:00</span>
+                                    </div>
+                                    <div class="day">
+                                        <b>T6</b><span>08:00</span
+                                        ><span>17:00</span>
+                                    </div>
+                                    <div class="day day-off">
+                                        <b>T7</b><span>Nghỉ</span>
+                                    </div>
+                                    <div class="day day-off">
+                                        <b>CN</b><span>Nghỉ</span>
+                                    </div>
+                                </div>
+                            </section>
+                            <button class="edit-staff">
+                                <i class="fa-solid fa-pen"></i> Chỉnh sửa thông
+                                tin
+                            </button>
+                        </aside>
+                    </div>
+                </div>
+            </main>
+        <dialog
+            class="static-dialog"
+            id="staff-edit-dialog"
+            aria-labelledby="staff-edit-title"
+        >
+            <form data-ephemeral-form="staff-edit">
+                <div class="dialog-top">
+                    <h2 id="staff-edit-title">
+                        <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+                        Chỉnh sửa nhân viên
+                    </h2>
+                    <button
+                        class="dialog-close"
+                        type="button"
+                        data-dialog-close
+                        aria-label="Đóng"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p class="dialog-hint">
+                    Bản xem trước chỉ thay đổi trên giao diện hiện tại.
+                </p>
+                <div class="dialog-fields">
+                    <label>Họ và tên<input name="name" required /></label
+                    ><label
+                        >Số điện thoại<input
+                            name="phone"
+                            type="tel"
+                            required /></label
+                    ><label>Vị trí<input name="role" required /></label>
+                </div>
+                <div class="dialog-actions">
+                    <button
+                        class="button-light"
+                        type="button"
+                        data-dialog-close
+                    >
+                        Hủy</button
+                    ><button class="button-primary" type="submit">
+                        <i class="fa-solid fa-check"></i> Xác nhận
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog
+            class="static-dialog confirm-dialog"
+            id="staff-delete-dialog"
+            aria-labelledby="staff-delete-title"
+        >
+            <div class="confirm-content">
+                <span class="confirm-icon"
+                    ><i class="fa-regular fa-trash-can"></i
+                ></span>
+                <h2 id="staff-delete-title">Xóa nhân viên?</h2>
+                <p class="dialog-hint">
+                    Thao tác mô phỏng trên giao diện hiện tại, không lưu dữ
+                    liệu.
+                </p>
+                <div class="dialog-actions">
+                    <button
+                        class="button-light"
+                        type="button"
+                        data-dialog-close
+                    >
+                        Giữ lại</button
+                    ><button
+                        class="button-primary danger-action"
+                        type="button"
+                        data-confirm-delete
+                    >
+                        <i class="fa-regular fa-trash-can"></i> Xóa tạm thời
+                    </button>
+                </div>
+            </div>
+        </dialog>
+        <script>
+            (() => {
+                const rows = () =>
+                    document.querySelectorAll(".staff-table tbody tr");
+                const search = document.querySelector(".staff-search input");
+                const roleFilter = document.querySelector(
+                    ".staff-filters select",
+                );
+                const statusFilter = document.querySelectorAll(
+                    ".staff-filters select",
+                )[1];
+                const count = document.querySelector(".row-count");
+                const selectRow = (row) => {
+                    rows().forEach((item) =>
+                        item.classList.toggle("selected", item === row),
+                    );
+                    const d = row.dataset;
+                    document.querySelector(".detail-name h2").textContent =
+                        d.name;
+                    document.querySelector(
+                        ".detail-name > span:first-of-type",
+                    ).textContent = d.code;
+                    document.querySelector(".detail-role").textContent = d.role;
+                    document.querySelector(".detail-phone").textContent =
+                        d.phone;
+                    document.querySelector(".detail-email").textContent =
+                        d.email.replaceAll("\u200b", "");
+                    document.querySelector(".detail-start").textContent =
+                        d.start;
+                    const initials =
+                        row.querySelector(".staff-avatar").textContent;
+                    const avatar = document.querySelector(".detail-avatar");
+                    avatar.textContent = initials;
+                    avatar.className = `detail-avatar ${row.querySelector(".staff-avatar").classList[1]}`;
+                    document.querySelector(
+                        ".detail-name .status-pill",
+                    ).textContent = d.status;
+                    document.querySelector(
+                        ".detail-name .status-pill",
+                    ).className =
+                        `status-pill ${d.status === "Nghỉ" ? "is-off" : "is-working"}`;
+                };
+                const filterRows = () => {
+                    const query = search.value.trim().toLocaleLowerCase("vi");
+                    let visible = 0;
+                    rows().forEach((row) => {
+                        const matches =
+                            row.textContent
+                                .toLocaleLowerCase("vi")
+                                .includes(query) &&
+                            (!roleFilter.value ||
+                                row.dataset.role === roleFilter.value) &&
+                            (!statusFilter.value ||
+                                row.dataset.status === statusFilter.value);
+                        row.hidden = !matches;
+                        if (matches) visible++;
+                    });
+                    count.textContent = `Hiển thị ${visible} / 12 nhân viên`;
+                };
+                rows().forEach((row) =>
+                    row
+                        .querySelector(".staff-person")
+                        .addEventListener("click", () => selectRow(row)),
+                );
+                search.addEventListener("input", filterRows);
+                roleFilter.addEventListener("change", filterRows);
+                statusFilter.addEventListener("change", filterRows);
+                document.querySelectorAll(".staff-tab").forEach((tab) =>
+                    tab.addEventListener("click", () => {
+                        document
+                            .querySelectorAll(".staff-tab")
+                            .forEach((item) => {
+                                item.classList.toggle("active", item === tab);
+                                item.setAttribute(
+                                    "aria-selected",
+                                    item === tab,
+                                );
+                            });
+                    }),
+                );
+                let pendingDeleteRow = null;
+                const editDialog = document.querySelector("#staff-edit-dialog");
+                const openStaffEditor = (row) => {
+                    if (!row || !editDialog) return;
+                    const form = editDialog.querySelector("form");
+                    form.elements.name.value = row.dataset.name || "";
+                    form.elements.phone.value = row.dataset.phone || "";
+                    form.elements.role.value = row.dataset.role || "";
+                    editDialog.showModal();
+                };
+                document
+                    .querySelector(".edit-staff")
+                    ?.addEventListener("click", () =>
+                        openStaffEditor(
+                            document.querySelector(
+                                ".staff-table tbody tr.selected",
+                            ),
+                        ),
+                    );
+                document
+                    .querySelectorAll(".row-actions button:not(.delete-staff)")
+                    .forEach((button) =>
+                        button.addEventListener("click", () =>
+                            openStaffEditor(button.closest("tr")),
+                        ),
+                    );
+                document.querySelectorAll(".delete-staff").forEach((button) =>
+                    button.addEventListener("click", () => {
+                        pendingDeleteRow = button.closest("tr");
+                        document
+                            .querySelector("#staff-delete-dialog")
+                            ?.showModal();
+                    }),
+                );
+                document
+                    .querySelector("[data-confirm-delete]")
+                    ?.addEventListener("click", () => {
+                        if (pendingDeleteRow) {
+                            pendingDeleteRow.remove();
+                            pendingDeleteRow = null;
+                            filterRows();
+                            document
+                                .querySelector("#staff-delete-dialog")
+                                ?.close();
+                            const toast =
+                                document.querySelector(".app-toast") ||
+                                (() => {
+                                    const node = document.createElement("div");
+                                    node.className = "app-toast";
+                                    node.setAttribute("role", "status");
+                                    document.body.append(node);
+                                    return node;
+                                })();
+                            toast.textContent =
+                                "Đã xóa tạm nhân viên khỏi danh sách hiện tại.";
+                            toast.classList.add("visible");
+                            setTimeout(
+                                () => toast.classList.remove("visible"),
+                                2600,
+                            );
+                        }
+                    });
+            })();
+        </script>
+        <dialog
+            class="static-dialog"
+            id="staff-dialog"
+            aria-labelledby="staff-dialog-title"
+        >
+            <form method="dialog">
+                <div class="dialog-top">
+                    <h2 id="staff-dialog-title">
+                        <i class="fa-solid fa-user-plus" aria-hidden="true"></i
+                        >Thêm nhân viên
+                    </h2>
+                    <button
+                        class="dialog-close"
+                        type="button"
+                        data-dialog-close
+                        aria-label="Đóng"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p class="dialog-hint">
+                    Biểu mẫu giao diện. Thông tin chưa được lưu vào hệ thống.
+                </p>
+                <div class="dialog-fields">
+                    <label>Họ và tên<input name="name" required /></label
+                    ><label
+                        >Số điện thoại<input
+                            name="phone"
+                            type="tel"
+                            required /></label
+                    ><label>Vị trí<input name="role" required /></label>
+                </div>
+                <div class="dialog-actions">
+                    <button
+                        class="button-light"
+                        type="button"
+                        data-dialog-close
+                    >
+                        Hủy</button
+                    ><button class="button-primary" type="submit">
+                        <i class="fa-solid fa-check"></i> Xong
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        </div>
+    </body>
+</html>

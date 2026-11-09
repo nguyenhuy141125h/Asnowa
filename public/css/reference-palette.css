@@ -1,0 +1,37 @@
+/* Keep the requested white canvas while using the original SNOWA green palette. */
+:root {
+  --ui-canvas: #ffffff !important;
+  --cream: #ffffff !important;
+  --paper: #ffffff !important;
+}
+
+html,
+body,
+body[class^="page-"],
+body.home-dashboard,
+body.staff-dashboard,
+body .dashboard-shell,
+body .main-area {
+  background-color: #ffffff !important;
+}
+
+body .topbar { background-color: #ffffff !important; }
+html { scrollbar-color: #236b3c #e7eee8; }
+
+/* Membership badges use distinct, familiar colors for each tier. */
+body.page-customers .customer-tier.tier-gold {
+  border: 1px solid #f0d99e !important;
+  background: #fff5dc !important;
+  color: #8b6100 !important;
+}
+body.page-customers .customer-tier.tier-silver {
+  border: 1px solid #d8e0e8 !important;
+  background: #eef2f6 !important;
+  color: #53677d !important;
+}
+body.page-customers .customer-tier.tier-bronze {
+  border: 1px solid #ecd1bd !important;
+  background: #f8ece2 !important;
+  color: #925638 !important;
+}
+body.page-customers .customer-tier i { color: currentColor !important; }

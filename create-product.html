@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Thêm / chỉnh sửa sản phẩm</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/pages.css" />
+        <link rel="stylesheet" href="./public/css/system-pages.css" />
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261105-management-forms-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+        <link
+            rel="stylesheet"
+            href="./public/css/product-create.css?v=20261109-full-options-v1"
+        />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+        <link rel="stylesheet" href="./public/css/product-edit-mode.css?v=20261109-v1" />
+        <script defer src="./public/js/product-form.js?v=20261109-v1"></script>
+</head>
+    <body class="page-create-product">
+        <div class="dashboard-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html" aria-label="SNOWA trang chủ"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav" aria-label="Điều hướng chính">
+                    <a class="nav-link" href="index.html"
+                        ><i class="fa-solid fa-chart-pie" aria-hidden="true"></i
+                        ><span>Tổng quan</span></a
+                    >
+                    <a class="nav-link" href="sales.html"
+                        ><i
+                            class="fa-solid fa-cash-register"
+                            aria-hidden="true"
+                        ></i
+                        ><span>Bán hàng (POS)</span></a
+                    >
+                    <a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt" aria-hidden="true"></i
+                        ><span>Đơn hàng</span></a
+                    >
+                    <a class="nav-link" href="tables.html"
+                        ><i
+                            class="fa-solid fa-table-cells-large"
+                            aria-hidden="true"
+                        ></i
+                        ><span>Sơ đồ bàn</span></a
+                    >
+                    <a
+                        class="nav-link active"
+                        href="products.html"
+                        aria-current="page"
+                        ><i class="fa-solid fa-mug-hot" aria-hidden="true"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a>
+                    <a class="nav-link" href="inventory.html"
+                        ><i
+                            class="fa-solid fa-boxes-stacked"
+                            aria-hidden="true"
+                        ></i
+                        ><span>Kho hàng</span></a
+                    >
+                    <a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users" aria-hidden="true"></i
+                        ><span>Khách hàng</span></a
+                    >
+                    <a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags" aria-hidden="true"></i
+                        ><span>Khuyến mãi</span></a
+                    >
+                    <a class="nav-link" href="reports.html"
+                        ><i
+                            class="fa-solid fa-chart-column"
+                            aria-hidden="true"
+                        ></i
+                        ><span>Báo cáo</span></a
+                    >
+                    <a class="nav-link" href="staff.html"
+                        ><i
+                            class="fa-solid fa-user-group"
+                            aria-hidden="true"
+                        ></i
+                        ><span>Nhân viên</span></a
+                    >
+                    <a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear" aria-hidden="true"></i
+                        ><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+
+            <main class="main-area">
+                <header class="topbar">
+                    <span class="breadcrumb"
+                        >Quản lý cửa hàng　›　Sản phẩm　›　<strong
+                            >Thêm / chỉnh sửa sản phẩm</strong
+                        ></span
+                    >
+                    <div class="topbar-actions">
+                        <span class="store-open"
+                            ><i
+                                class="fa-solid fa-circle"
+                                aria-hidden="true"
+                            ></i>
+                            Cửa hàng đang mở</span
+                        >
+                        <div class="admin-profile">
+                            <span class="avatar">A</span
+                            ><span
+                                ><strong>Quản trị viên</strong
+                                ><small>SNOWA Cafe</small></span
+                            >
+                        </div>
+                    </div>
+                </header>
+
+                <div class="page-content create-product-page">
+                    <div class="page-heading create-product-heading app-page-heading">
+                        <div>
+                            
+                            <h1>
+                                <i
+                                    class="fa-solid fa-plus"
+                                    aria-hidden="true"
+                                ></i
+                                ><span>Thêm / chỉnh sửa sản phẩm</span>
+                            </h1>
+                            <p>Th?m m?n m?i ho?c c?p nh?t s?n ph?m hi?n c? trong th?c ??n.</p>
+                        </div>
+                        <a class="button-light" href="products.html"
+                            ><i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
+                            Danh sách sản phẩm</a
+                        >
+                    </div>
+
+                    <form
+                        class="create-product-form"
+                        aria-label="Thông tin sản phẩm"
+                    >
+                        <div class="product-form-main">
+                            <section
+                                class="product-form-section"
+                                aria-labelledby="basic-title"
+                            >
+                                <div class="product-section-title">
+                                    <span class="section-number">01</span>
+                                    <div>
+                                        <h2 id="basic-title">
+                                            Thông tin cơ bản
+                                        </h2>
+                                        <p>
+                                            Những thông tin khách hàng sẽ thấy
+                                            trên thực đơn.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-form-grid">
+                                    <label class="product-field field-wide"
+                                        >Tên sản phẩm
+                                        <span class="required-mark">*</span
+                                        ><input
+                                            type="text"
+                                            name="name"
+                                            placeholder="Ví dụ: Matcha Latte"
+                                            maxlength="80"
+                                            required
+                                    /></label>
+                                    <label class="product-field"
+                                        >Mã sản phẩm<input
+                                            type="text"
+                                            name="sku"
+                                            placeholder="Ví dụ: MAT-001"
+                                            maxlength="30"
+                                        /><small
+                                            >Để trống nếu chưa có mã
+                                            riêng.</small
+                                        ></label
+                                    >
+                                    <div class="product-field">
+                                        <label for="product-category"
+                                            >Danh mục
+                                            <span class="required-mark"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <select
+                                            id="product-category"
+                                            name="category"
+                                            required
+                                        >
+                                            <option value="" selected disabled>
+                                                Chọn danh mục
+                                            </option>
+                                            <option value="coffee">
+                                                Cà phê
+                                            </option>
+                                            <option value="tea">Trà</option>
+                                            <option value="bingsu">
+                                                Bingsu
+                                            </option>
+                                            <option value="cake">Bánh</option>
+                                            <option value="other">Khác</option>
+                                        </select>
+                                        <small
+                                            ><a
+                                                href="product-categories.html"
+                                                >Quản lý danh mục</a
+                                            >
+                                            trên trang Danh mục sản phẩm.</small
+                                        >
+                                    </div>
+                                    <label class="product-field field-wide"
+                                        >Mô tả sản phẩm<textarea
+                                            name="description"
+                                            rows="4"
+                                            maxlength="400"
+                                            placeholder="Hương vị, thành phần hoặc điểm nổi bật của món..."
+                                        ></textarea
+                                        ><small
+                                            >Mô tả ngắn giúp nhân viên nhận biết
+                                            món dễ hơn.</small
+                                        ></label
+                                    >
+                                </div>
+                            </section>
+
+                            <section
+                                class="product-form-section"
+                                aria-labelledby="price-title"
+                            >
+                                <div class="product-section-title">
+                                    <span class="section-number">02</span>
+                                    <div>
+                                        <h2 id="price-title">
+                                            Giá bán và trạng thái
+                                        </h2>
+                                        <p>
+                                            Thiết lập giá và cách món xuất hiện
+                                            trên thực đơn.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-form-grid">
+                                    <div class="product-field">
+                                        <label for="product-price"
+                                            >Giá bán
+                                            <span class="required-mark"
+                                                >*</span
+                                            ></label
+                                        >
+                                        <div class="price-input">
+                                            <input
+                                                id="product-price"
+                                                type="number"
+                                                name="price"
+                                                min="0"
+                                                step="1000"
+                                                placeholder="59.000"
+                                                required
+                                            /><span>₫</span>
+                                        </div>
+                                        <small
+                                            >Nhập giá bán cho một phần hoặc một
+                                            ly.</small
+                                        >
+                                    </div>
+                                    <label class="product-field"
+                                        >Đơn vị bán<select name="unit">
+                                            <option value="ly">Ly</option>
+                                            <option value="phan">Phần</option>
+                                            <option value="cai">Cái</option>
+                                        </select></label
+                                    >
+                                    <fieldset
+                                        class="product-choice-group field-wide"
+                                    >
+                                        <legend>Trạng thái bán</legend>
+                                        <div class="product-choice-row">
+                                            <label class="choice-tile"
+                                                ><input
+                                                    type="radio"
+                                                    name="status"
+                                                    value="active"
+                                                    checked
+                                                /><span
+                                                    ><strong>Đang bán</strong
+                                                    ><small
+                                                        >Hiển thị trên thực
+                                                        đơn</small
+                                                    ></span
+                                                ></label
+                                            ><label class="choice-tile"
+                                                ><input
+                                                    type="radio"
+                                                    name="status"
+                                                    value="hidden"
+                                                /><span
+                                                    ><strong>Tạm ẩn</strong
+                                                    ><small
+                                                        >Chưa hiển thị cho
+                                                        khách</small
+                                                    ></span
+                                                ></label
+                                            >
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </section>
+
+                            <section
+                                class="product-form-section"
+                                aria-labelledby="option-title"
+                            >
+                                <div class="product-section-title">
+                                    <span class="section-number">03</span>
+                                    <div>
+                                        <h2 id="option-title">
+                                            Tùy chọn phục vụ
+                                        </h2>
+                                        <p>
+                                            Chọn kích cỡ phù hợp với món. Có thể
+                                            bỏ qua nếu món chỉ có một cỡ.
+                                        </p>
+                                    </div>
+                                </div>
+                                <fieldset class="product-choice-group">
+                                    <legend>Kích cỡ áp dụng</legend>
+                                    <div class="product-size-row">
+                                        <label class="size-tile"
+                                            ><input
+                                                type="checkbox"
+                                                name="size"
+                                                value="standard"
+                                                checked
+                                            /><span>Tiêu chuẩn</span></label
+                                        ><label class="size-tile"
+                                            ><input
+                                                type="checkbox"
+                                                name="size"
+                                                value="m"
+                                                checked
+                                            /><span>Size M</span></label
+                                        ><label class="size-tile"
+                                            ><input
+                                                type="checkbox"
+                                                name="size"
+                                                value="l"
+                                                checked
+                                            /><span>Size L</span></label
+                                        >
+                                    </div>
+                                </fieldset>
+                                <div class="size-price-table" aria-label="Giá theo kích cỡ">
+                                    <div class="size-price-heading"><strong>Kích cỡ</strong><strong>Giá bán</strong></div>
+                                    <label><span><strong>Tiêu chuẩn</strong><small>Dùng giá cơ bản</small></span><span class="size-price-input-wrap"><input class="size-price-input" type="number" min="0" step="500" value="59000" aria-label="Giá bán theo kích cỡ" /><b>&#8363;</b></span></label>
+                                    <label><span><strong>Size M</strong><small>Thêm 100 ml</small></span><span class="size-price-input-wrap"><input class="size-price-input" type="number" min="0" step="500" value="69000" aria-label="Giá bán theo kích cỡ" /><b>&#8363;</b></span></label>
+                                    <label><span><strong>Size L</strong><small>Thêm 200 ml</small></span><span class="size-price-input-wrap"><input class="size-price-input" type="number" min="0" step="500" value="79000" aria-label="Giá bán theo kích cỡ" /><b>&#8363;</b></span></label>
+                                </div>
+                            </section>
+
+                            <section class="product-form-section" aria-labelledby="recipe-title">
+                                <div class="product-section-title">
+                                    <span class="section-number">04</span>
+                                    <div>
+                                        <h2 id="recipe-title">Nguyên liệu tiêu hao</h2>
+                                        <p>Khai báo định lượng cho mỗi sản phẩm để biết món này trừ những gì khỏi kho.</p>
+                                    </div>
+                                </div>
+                                <div class="recipe-mode-row">
+                                    <label class="recipe-mode selected"><input type="radio" name="inventory-mode" checked /><span><strong>Có sử dụng nguyên liệu kho</strong><small>Trừ tồn kho theo định lượng khi bán món.</small></span></label>
+                                    <label class="recipe-mode"><input type="radio" name="inventory-mode" /><span><strong>Không theo dõi nguyên liệu</strong><small>Dùng cho sản phẩm đóng gói hoặc không quản lý tồn.</small></span></label>
+                                </div>
+                                <div class="recipe-table-wrap">
+                                    <table class="recipe-table">
+                                        <thead><tr><th>Nguyên liệu</th><th>Lượng dùng / 1 sản phẩm</th><th>Tồn hiện tại</th><th></th></tr></thead>
+                                        <tbody>
+                                            <tr><td><strong>Bột matcha</strong><small>Đơn vị kho: Kg</small></td><td><div class="recipe-quantity"><input type="number" value="8" aria-label="Định lượng bột matcha" /><span>g</span></div></td><td><span class="recipe-stock">1,2 kg</span></td><td><button class="recipe-remove" type="button" aria-label="Bỏ bột matcha"><i class="fa-regular fa-trash-can"></i></button></td></tr>
+                                            <tr><td><strong>Sữa tươi</strong><small>Đơn vị kho: Lít</small></td><td><div class="recipe-quantity"><input type="number" value="150" aria-label="Định lượng sữa tươi" /><span>ml</span></div></td><td><span class="recipe-stock">18 lít</span></td><td><button class="recipe-remove" type="button" aria-label="Bỏ sữa tươi"><i class="fa-regular fa-trash-can"></i></button></td></tr>
+                                            <tr><td><strong>Siro đường</strong><small>Đơn vị kho: Lít</small></td><td><div class="recipe-quantity"><input type="number" value="15" aria-label="Định lượng siro đường" /><span>ml</span></div></td><td><span class="recipe-stock">4,5 lít</span></td><td><button class="recipe-remove" type="button" aria-label="Bỏ siro đường"><i class="fa-regular fa-trash-can"></i></button></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="recipe-add-button" type="button"><i class="fa-solid fa-plus"></i> Thêm nguyên liệu từ kho</button>
+                                <p class="recipe-note"><i class="fa-solid fa-circle-info"></i> Định lượng là lượng nguyên liệu dùng cho một phần tiêu chuẩn. Size lớn và topping có thể cần định lượng riêng.</p>
+                            </section>
+
+                            <section class="product-form-section" aria-labelledby="topping-title">
+                                <div class="product-section-title">
+                                    <span class="section-number">05</span>
+                                    <div>
+                                        <h2 id="topping-title">Topping và món thêm</h2>
+                                        <p>Cho phép khách chọn thêm tùy chọn khi gọi món.</p>
+                                    </div>
+                                </div>
+                                <div class="topping-settings">
+                                    <label class="topping-toggle"><input type="checkbox" checked /><span><strong>Bật lựa chọn topping</strong><small>Khách có thể chọn nhiều topping cho sản phẩm này.</small></span></label>
+                                    <label class="topping-limit">Số topping tối đa<select><option>Không giới hạn</option><option>1 topping</option><option>2 topping</option><option>3 topping</option></select></label>
+                                </div>
+                                <div class="topping-list">
+                                    <div class="topping-row"><input type="checkbox" checked /><span><strong>Trân châu đen</strong><small>Trừ kho: 30 g / phần</small></span><span class="topping-price"><input type="number" min="0" step="500" value="8000" aria-label="Giá topping" /> <b>&#8363;</b></span></div>
+                                    <div class="topping-row"><input type="checkbox" checked /><span><strong>Thạch đào</strong><small>Trừ kho: 40 g / phần</small></span><span class="topping-price"><input type="number" min="0" step="500" value="8000" aria-label="Giá topping" /> <b>&#8363;</b></span></div>
+                                    <div class="topping-row"><input type="checkbox" /><span><strong>Kem cheese</strong><small>Trừ kho: 25 g / phần</small></span><span class="topping-price"><input type="number" min="0" step="500" value="12000" aria-label="Giá topping" /> <b>&#8363;</b></span></div>
+                                </div>
+                                <button class="recipe-add-button" type="button"><i class="fa-solid fa-plus"></i> Thêm topping</button>
+                            </section>
+                        </div>
+
+                        <aside
+                            class="product-form-side"
+                            aria-label="Ảnh và hướng dẫn tạo sản phẩm"
+                        >
+                            <section
+                                class="product-side-card"
+                                aria-labelledby="photo-title"
+                            >
+                                <div class="side-card-heading">
+                                    <span class="side-icon"
+                                        ><i
+                                            class="fa-regular fa-image"
+                                            aria-hidden="true"
+                                        ></i
+                                    ></span>
+                                    <div>
+                                        <h2 id="photo-title">Ảnh sản phẩm</h2>
+                                        <p>Ảnh rõ giúp món dễ nhận ra hơn.</p>
+                                    </div>
+                                </div>
+                                <label
+                                    class="product-upload"
+                                    for="product-image"
+                                    ><i
+                                        class="fa-solid fa-cloud-arrow-up"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><strong>Chọn ảnh từ máy</strong
+                                    ><span>JPG, PNG hoặc WebP</span></label
+                                ><input
+                                    class="product-file-input"
+                                    id="product-image"
+                                    type="file"
+                                    name="image"
+                                    accept="image/png,image/jpeg,image/webp"
+                                />
+                                <p class="upload-hint">
+                                    Nên dùng ảnh vuông, đủ sáng và thấy rõ món.
+                                </p>
+                            </section>
+                            <section
+                                class="product-side-card product-help-card"
+                                aria-labelledby="help-title"
+                            >
+                                <div class="side-card-heading">
+                                    <span class="side-icon"
+                                        ><i
+                                            class="fa-solid fa-list-check"
+                                            aria-hidden="true"
+                                        ></i
+                                    ></span>
+                                    <div>
+                                        <h2 id="help-title">
+                                            Trước khi đăng bán
+                                        </h2>
+                                        <p>
+                                            Kiểm tra nhanh thông tin cần thiết.
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <i
+                                            class="fa-solid fa-check"
+                                            aria-hidden="true"
+                                        ></i>
+                                        Tên món dễ hiểu, đúng thực đơn
+                                    </li>
+                                    <li>
+                                        <i
+                                            class="fa-solid fa-check"
+                                            aria-hidden="true"
+                                        ></i>
+                                        Chọn đúng danh mục
+                                    </li>
+                                    <li>
+                                        <i
+                                            class="fa-solid fa-check"
+                                            aria-hidden="true"
+                                        ></i>
+                                        Giá bán đã được kiểm tra
+                                    </li>
+                                    <li>
+                                        <i
+                                            class="fa-solid fa-check"
+                                            aria-hidden="true"
+                                        ></i>
+                                        Ảnh món rõ và phù hợp
+                                    </li>
+                                </ul>
+                            </section>
+                        </aside>
+
+                        <div class="product-form-footer">
+                            <p id="form-preview-note">
+                                <i
+                                    class="fa-solid fa-circle-info"
+                                    aria-hidden="true"
+                                ></i>
+                                Đây là giao diện mẫu bằng HTML/CSS; thông tin
+                                chưa được lưu vào hệ thống.
+                            </p>
+                            <div>
+                                <a class="button-light" href="products.html"
+                                    >Hủy</a
+                                ><button
+                                    class="button-primary"
+                                    type="button"
+                                    aria-describedby="form-preview-note"
+                                >
+                                    <i
+                                        class="fa-solid fa-check"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Lưu sản phẩm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

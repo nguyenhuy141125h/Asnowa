@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Báo cáo</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/pages.css" />
+        <link rel="stylesheet" href="./public/css/system-pages.css" />
+        <script defer src="./public/js/app.js"></script>
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261109-category-colors-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+        <link rel="stylesheet" href="./public/css/chart-hover.css?v=20261109-v1" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+</head>
+    <body class="page-reports">
+        <div class="dashboard-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav">
+                    <a class="nav-link" href="index.html"
+                        ><i class="fa-solid fa-chart-pie"></i
+                        ><span>Tổng quan</span></a
+                    ><a class="nav-link" href="sales.html"
+                        ><i class="fa-solid fa-cash-register"></i
+                        ><span>Bán hàng (POS)</span></a
+                    ><a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt"></i
+                        ><span>Đơn hàng</span></a
+                    ><a class="nav-link" href="tables.html"
+                        ><i class="fa-solid fa-table-cells-large"></i
+                        ><span>Sơ đồ bàn</span></a
+                    ><a class="nav-link" href="products.html"
+                        ><i class="fa-solid fa-mug-hot"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a><a class="nav-link" href="inventory.html"
+                        ><i class="fa-solid fa-boxes-stacked"></i
+                        ><span>Kho hàng</span></a
+                    ><a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users"></i
+                        ><span>Khách hàng</span></a
+                    ><a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags"></i
+                        ><span>Khuyến mãi</span></a
+                    ><a class="nav-link active" href="reports.html"
+                        ><i class="fa-solid fa-chart-column"></i
+                        ><span>Báo cáo</span></a
+                    ><a class="nav-link" href="staff.html"
+                        ><i class="fa-solid fa-user-group"></i
+                        ><span>Nhân viên</span></a
+                    ><a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+            <main class="main-area">
+                <header class="topbar">
+                    <span class="breadcrumb"
+                        >Quản lý cửa hàng　›　<strong>Báo cáo</strong></span
+                    >
+                    <div class="topbar-actions">
+                        <span class="store-open"
+                            ><i class="fa-solid fa-circle"></i> Cửa hàng đang
+                            mở</span
+                        ><button class="icon-button" aria-label="Thông báo">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div class="admin-profile">
+                            <span class="avatar">A</span
+                            ><span
+                                ><strong>Quản trị viên</strong
+                                ><small>SNOWA Cafe</small></span
+                            >
+                        </div>
+                    </div>
+                </header>
+                <div class="page-content report-page">
+                    <section class="report-intro app-page-heading">
+                        <div>
+                            </h1>
+                            <p>Tóm tắt hoạt động và doanh thu của cửa hàng.</p>
+                        </div>
+                        <div class="report-controls">
+                            <button
+                                class="button-light report-export"
+                                type="button"
+                            >
+                                <i class="fa-solid fa-arrow-down-to-line"></i>
+                                Xuất báo cáo
+                            </button>
+                            <button
+                                class="button-light report-date"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-calendar"></i> 01/11 –
+                                07/11/2026
+                            </button>
+                        </div>
+                    </section>
+                    <div class="report-period-row">
+                        <div
+                            class="report-period-tabs"
+                            aria-label="Khoảng thời gian"
+                        >
+                            <button class="active" type="button">7 ngày</button
+                            ><button type="button">30 ngày</button
+                            ><button type="button">Quý này</button>
+                        </div>
+                        <span
+                            ><i class="fa-solid fa-arrow-trend-up"></i> So sánh
+                            với kỳ trước</span
+                        >
+                    </div>
+                    <section
+                        class="report-metrics"
+                        aria-label="Chỉ số kinh doanh"
+                    >
+                        <article class="report-metric report-metric-featured">
+                            <span class="report-metric-icon"
+                                ><i class="fa-solid fa-coins"></i
+                            ></span>
+                            <div>
+                                <small>Doanh thu</small
+                                ><strong>86.450.000 ₫</strong
+                                ><span class="report-change"
+                                    ><i class="fa-solid fa-arrow-up"></i> 12,4%
+                                    <em>so với kỳ trước</em></span
+                                >
+                            </div>
+                            <i
+                                class="fa-solid fa-chart-line report-watermark"
+                            ></i>
+                        </article>
+                        <article class="report-metric">
+                            <span class="report-metric-icon"
+                                ><i class="fa-solid fa-receipt"></i
+                            ></span>
+                            <div>
+                                <small>Đơn hàng</small><strong>1.264</strong
+                                ><span class="report-change"
+                                    ><i class="fa-solid fa-arrow-up"></i> 8,2%
+                                    <em>so với kỳ trước</em></span
+                                >
+                            </div>
+                        </article>
+                        <article class="report-metric">
+                            <span class="report-metric-icon"
+                                ><i class="fa-solid fa-user-group"></i
+                            ></span>
+                            <div>
+                                <small>Khách hàng</small><strong>98</strong
+                                ><span class="report-change"
+                                    ><i class="fa-solid fa-arrow-up"></i> 5,1%
+                                    <em>so với kỳ trước</em></span
+                                >
+                            </div>
+                        </article>
+                        <article class="report-metric">
+                            <span class="report-metric-icon"
+                                ><i class="fa-solid fa-basket-shopping"></i
+                            ></span>
+                            <div>
+                                <small>Giá trị trung bình</small
+                                ><strong>68.400 ₫</strong
+                                ><span class="report-change"
+                                    ><i class="fa-solid fa-arrow-up"></i> 3,6%
+                                    <em>so với kỳ trước</em></span
+                                >
+                            </div>
+                        </article>
+                    </section>
+                    <section class="report-main-grid">
+                        <article class="report-panel report-trend-panel">
+                            <div class="report-panel-head">
+                                <div>
+                                    <span class="report-kicker">DOANH THU</span>
+                                    <h2>Nhịp kinh doanh trong tuần</h2>
+                                    <p>Doanh thu theo ngày · triệu đồng</p>
+                                </div>
+                                <span class="report-total"
+                                    >86,45M <small>tổng tuần</small></span
+                                >
+                            </div>
+                            <div class="report-chart">
+                                <div class="report-y-axis">
+                                    <span>20M</span><span>15M</span
+                                    ><span>10M</span><span>5M</span
+                                    ><span>0</span>
+                                </div>
+                                <div class="report-plot">
+                                    <div class="report-grid-lines">
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                    </div>
+                                    <div class="report-bars">
+                                        <div class="report-bar-wrap" title="Thứ 2 · Doanh thu: 4,6 triệu đồng">
+                                            <b>4,6</b><i style="height: 24%"></i
+                                            ><small>T2</small>
+                                        </div>
+                                        <div class="report-bar-wrap" title="Thứ 3 · Doanh thu: 7,8 triệu đồng">
+                                            <b>7,8</b><i style="height: 40%"></i
+                                            ><small>T3</small>
+                                        </div>
+                                        <div class="report-bar-wrap" title="Thứ 4 · Doanh thu: 10,4 triệu đồng">
+                                            <b>10,4</b
+                                            ><i style="height: 53%"></i
+                                            ><small>T4</small>
+                                        </div>
+                                        <div class="report-bar-wrap" title="Thứ 5 · Doanh thu: 9,1 triệu đồng">
+                                            <b>9,1</b><i style="height: 47%"></i
+                                            ><small>T5</small>
+                                        </div>
+                                        <div class="report-bar-wrap" title="Thứ 6 · Doanh thu: 14,2 triệu đồng">
+                                            <b>14,2</b
+                                            ><i style="height: 72%"></i
+                                            ><small>T6</small>
+                                        </div>
+                                        <div class="report-bar-wrap" title="Thứ 7 · Doanh thu: 12,1 triệu đồng">
+                                            <b>12,1</b
+                                            ><i style="height: 62%"></i
+                                            ><small>T7</small>
+                                        </div>
+                                        <div class="report-bar-wrap is-best" title="Chủ nhật · Doanh thu: 18,3 triệu đồng">
+                                            <b>18,3</b
+                                            ><i style="height: 93%"></i
+                                            ><small>CN</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="report-panel report-category-panel">
+                            <div class="report-panel-head">
+                                <div>
+                                    <span class="report-kicker"
+                                        >CƠ CẤU DOANH THU</span
+                                    >
+                                    <h2>Theo danh mục</h2>
+                                    <p>Tỷ trọng trong 7 ngày qua</p>
+                                </div>
+                                <button
+                                    class="report-more"
+                                    type="button"
+                                    aria-label="Tùy chọn"
+                                >
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <div class="report-category-content">
+                                <div class="report-donut">
+                                    <svg class="donut-chart" viewBox="0 0 100 100" role="img" aria-label="Tỷ trọng doanh thu theo danh mục">
+                                        <circle class="coffee" cx="50" cy="50" r="39" stroke-dasharray="110.27 245.04" stroke-dashoffset="0" tabindex="0"><title>Cà phê · 45% doanh thu</title></circle>
+                                        <circle class="tea" cx="50" cy="50" r="39" stroke-dasharray="68.61 245.04" stroke-dashoffset="-110.27" tabindex="0"><title>Trà · 28% doanh thu</title></circle>
+                                        <circle class="bingsu" cx="50" cy="50" r="39" stroke-dasharray="41.66 245.04" stroke-dashoffset="-178.88" tabindex="0"><title>Bingsu · 17% doanh thu</title></circle>
+                                        <circle class="cake" cx="50" cy="50" r="39" stroke-dasharray="24.50 245.04" stroke-dashoffset="-220.54" tabindex="0"><title>Bánh · 10% doanh thu</title></circle>
+                                    </svg>
+                                    <div>
+                                        <strong>86,45M</strong
+                                        ><small>doanh thu</small>
+                                    </div>
+                                </div>
+                                <div class="report-legend">
+                                    <div>
+                                        <i class="coffee"></i><span>Cà phê</span
+                                        ><b>45%</b>
+                                    </div>
+                                    <div>
+                                        <i class="tea"></i><span>Trà</span
+                                        ><b>28%</b>
+                                    </div>
+                                    <div>
+                                        <i class="bingsu"></i><span>Bingsu</span
+                                        ><b>17%</b>
+                                    </div>
+                                    <div>
+                                        <i class="cake"></i><span>Bánh</span
+                                        ><b>10%</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="report-bottom-grid">
+                        <article class="report-panel report-products-panel">
+                            <div class="report-panel-head">
+                                <div>
+                                    <span class="report-kicker"
+                                        >ĐƯỢC ƯA CHUỘNG</span
+                                    >
+                                    <h2>Món bán chạy</h2>
+                                </div>
+                                <a href="products.html"
+                                    >Tất cả sản phẩm
+                                    <i class="fa-solid fa-arrow-right"></i
+                                ></a>
+                            </div>
+                            <div class="report-product-list">
+                                <div class="report-product-row">
+                                    <span class="report-rank">01</span
+                                    ><img
+                                        src="./public/image/matcha-v2.webp"
+                                        alt="Matcha Latte"
+                                    /><span
+                                        ><strong>Matcha Latte</strong
+                                        ><small>Cà phê · 328 ly</small></span
+                                    ><b>19,35M</b>
+                                </div>
+                                <div class="report-product-row">
+                                    <span class="report-rank">02</span
+                                    ><img
+                                        src="./public/image/menu-products.webp"
+                                        alt="Bingsu xoài"
+                                    /><span
+                                        ><strong>Bingsu xoài</strong
+                                        ><small>Bingsu · 274 phần</small></span
+                                    ><b>16,42M</b>
+                                </div>
+                                <div class="report-product-row">
+                                    <span class="report-rank">03</span
+                                    ><img
+                                        src="./public/image/milk-tea.webp"
+                                        alt="Cà phê sữa dừa"
+                                    /><span
+                                        ><strong>Cà phê sữa dừa</strong
+                                        ><small>Cà phê · 219 ly</small></span
+                                    ><b>12,05M</b>
+                                </div>
+                                <div class="report-product-row">
+                                    <span class="report-rank">04</span
+                                    ><img
+                                        src="./public/image/strawberry-yogurt.webp"
+                                        alt="Trà dâu tươi"
+                                    /><span
+                                        ><strong>Trà dâu tươi</strong
+                                        ><small>Trà · 175 ly</small></span
+                                    ><b>9,62M</b>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="report-panel report-week-panel">
+                            <div class="report-panel-head">
+                                <div>
+                                    <span class="report-kicker">HIỆU SUẤT</span>
+                                    <h2>Tổng kết theo ngày</h2>
+                                </div>
+                                <span class="report-live"><i></i> 7 ngày</span>
+                            </div>
+                            <div class="report-week-list">
+                                <div>
+                                    <span>Thứ Hai</span
+                                    ><span class="report-track"
+                                        ><i style="width: 25%"></i></span
+                                    ><b>4,6M</b>
+                                </div>
+                                <div>
+                                    <span>Thứ Ba</span
+                                    ><span class="report-track"
+                                        ><i style="width: 43%"></i></span
+                                    ><b>7,8M</b>
+                                </div>
+                                <div>
+                                    <span>Thứ Tư</span
+                                    ><span class="report-track"
+                                        ><i style="width: 57%"></i></span
+                                    ><b>10,4M</b>
+                                </div>
+                                <div>
+                                    <span>Thứ Năm</span
+                                    ><span class="report-track"
+                                        ><i style="width: 50%"></i></span
+                                    ><b>9,1M</b>
+                                </div>
+                                <div>
+                                    <span>Thứ Sáu</span
+                                    ><span class="report-track"
+                                        ><i style="width: 78%"></i></span
+                                    ><b>14,2M</b>
+                                </div>
+                                <div>
+                                    <span>Thứ Bảy</span
+                                    ><span class="report-track"
+                                        ><i style="width: 66%"></i></span
+                                    ><b>12,1M</b>
+                                </div>
+                                <div class="is-best">
+                                    <span>Chủ Nhật</span
+                                    ><span class="report-track"
+                                        ><i style="width: 100%"></i></span
+                                    ><b>18,3M</b>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

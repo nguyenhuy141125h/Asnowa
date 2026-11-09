@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Sản phẩm</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/pages.css" />
+        <link rel="stylesheet" href="./public/css/system-pages.css" />
+        <script defer src="./public/js/app.js?v=20261109-product-edit-v1"></script>
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261105-management-forms-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+        <link
+            rel="stylesheet"
+            href="./public/css/product-list.css?v=20261109-v2-edit-dialog"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+    <link rel="stylesheet" href="./public/css/product-toppings.css?v=20261109-v1" />
+</head>
+    <body class="page-products">
+        <div class="dashboard-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav">
+                    <a class="nav-link" href="index.html"
+                        ><i class="fa-solid fa-chart-pie"></i
+                        ><span>Tổng quan</span></a
+                    ><a class="nav-link" href="sales.html"
+                        ><i class="fa-solid fa-cash-register"></i
+                        ><span>Bán hàng (POS)</span></a
+                    ><a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt"></i
+                        ><span>Đơn hàng</span></a
+                    ><a class="nav-link" href="tables.html"
+                        ><i class="fa-solid fa-table-cells-large"></i
+                        ><span>Sơ đồ bàn</span></a
+                    ><a class="nav-link active" href="products.html"
+                        ><i class="fa-solid fa-mug-hot"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a><a class="nav-link" href="inventory.html"
+                        ><i class="fa-solid fa-boxes-stacked"></i
+                        ><span>Kho hàng</span></a
+                    ><a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users"></i
+                        ><span>Khách hàng</span></a
+                    ><a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags"></i
+                        ><span>Khuyến mãi</span></a
+                    ><a class="nav-link" href="reports.html"
+                        ><i class="fa-solid fa-chart-column"></i
+                        ><span>Báo cáo</span></a
+                    ><a class="nav-link" href="staff.html"
+                        ><i class="fa-solid fa-user-group"></i
+                        ><span>Nhân viên</span></a
+                    ><a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+            <main class="main-area">
+                <header class="topbar">
+                    <span class="breadcrumb"
+                        >Quản lý cửa hàng　›　<strong>Sản phẩm</strong></span
+                    >
+                    <div class="topbar-actions">
+                        <span class="store-open"
+                            ><i class="fa-solid fa-circle"></i> Cửa hàng đang
+                            mở</span
+                        ><button class="icon-button" aria-label="Thông báo">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div class="admin-profile">
+                            <span class="avatar">A</span
+                            ><span
+                                ><strong>Quản trị viên</strong
+                                ><small>SNOWA Cafe</small></span
+                            >
+                        </div>
+                    </div>
+                </header>
+                <div class="page-content">
+                    <div class="page-heading app-page-heading">
+                        <div>
+<h1><i class="fa-solid fa-mug-hot" aria-hidden="true"></i><span>Sản phẩm</span></h1>
+<p>Quản lý thực đơn và các tùy chọn món tại cửa hàng.</p>
+</div>
+                        <div class="product-heading-actions">
+                            <a class="button-light" href="#toppings"><i class="fa-solid fa-glass-water" aria-hidden="true"></i> Topping</a>
+<a class="button-light" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Danh mục</a>
+                            <a class="button-primary" href="create-product.html"><i class="fa-solid fa-plus" aria-hidden="true"></i> Tạo sản phẩm</a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-list-heading">
+                        <div>
+                            <h2>Danh sách sản phẩm</h2>
+                            <p>Chọn danh mục hoặc tìm theo tên món.</p>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div
+                            class="segmented product-filters"
+                            aria-label="Lọc theo danh mục"
+                        >
+                            <button class="active">Tất cả · 8</button
+                            ><button>Cà phê · 3</button><button>Trà · 2</button
+                            ><button>Bingsu · 1</button
+                            ><button>Bánh · 2</button>
+                        </div>
+                        <label class="inline-search"
+                            ><i class="fa-solid fa-magnifying-glass"></i
+                            ><input placeholder="Tìm tên sản phẩm..."
+                        /></label>
+                    </div>
+                    <div class="product-list-head" aria-hidden="true">
+                        <span>Sản phẩm</span><span>Giá bán</span
+                        ><span>Trạng thái</span><span>Thao tác</span>
+                    </div>
+                    <section
+                        class="product-cards product-list"
+                        aria-label="Danh sách sản phẩm"
+                    >
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="matcha-latte"
+                        >
+                            <span class="card-icon product-photo-wrap"
+                                ><img
+                                    class="product-photo"
+                                    src="./public/image/matcha-v2.webp"
+                                    alt=""
+                            /></span>
+                            <div class="product-row-info">
+                                <h3>Matcha Latte</h3>
+                                <p>Cà phê</p>
+                            </div>
+                            <b class="card-price">59.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=matcha-latte"
+                                    class="product-row-action"
+                                    aria-label="Sửa Matcha Latte"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Matcha Latte"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="coconut-coffee"
+                        >
+                            <span class="card-icon product-photo-wrap"
+                                ><img
+                                    class="product-photo"
+                                    src="./public/image/milk-tea.webp"
+                                    alt=""
+                            /></span>
+                            <div class="product-row-info">
+                                <h3>Cà phê sữa dừa</h3>
+                                <p>Cà phê</p>
+                            </div>
+                            <b class="card-price">55.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=coconut-coffee"
+                                    class="product-row-action"
+                                    aria-label="Sửa Cà phê sữa dừa"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Cà phê sữa dừa"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="mango-bingsu"
+                        >
+                            <span
+                                class="card-icon product-photo-wrap menu-crop menu-mango"
+                                aria-hidden="true"
+                            ></span>
+                            <div class="product-row-info">
+                                <h3>Bingsu xoài</h3>
+                                <p>Bingsu</p>
+                            </div>
+                            <b class="card-price">79.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=mango-bingsu"
+                                    class="product-row-action"
+                                    aria-label="Sửa Bingsu xoài"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Bingsu xoài"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="tiramisu"
+                        >
+                            <span
+                                class="card-icon product-photo-wrap menu-crop menu-tiramisu"
+                                aria-hidden="true"
+                            ></span>
+                            <div class="product-row-info">
+                                <h3>Tiramisu</h3>
+                                <p>Bánh</p>
+                            </div>
+                            <b class="card-price">49.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=tiramisu"
+                                    class="product-row-action"
+                                    aria-label="Sửa Tiramisu"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Tiramisu"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="peach-tea"
+                        >
+                            <span class="card-icon product-photo-wrap"
+                                ><img
+                                    class="product-photo"
+                                    src="./public/image/blueberry-smoothie.webp"
+                                    alt=""
+                            /></span>
+                            <div class="product-row-info">
+                                <h3>Trà đào cam sả</h3>
+                                <p>Trà</p>
+                            </div>
+                            <b class="card-price">49.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=peach-tea"
+                                    class="product-row-action"
+                                    aria-label="Sửa Trà đào cam sả"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Trà đào cam sả"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="strawberry-tea"
+                        >
+                            <span class="card-icon product-photo-wrap"
+                                ><img
+                                    class="product-photo"
+                                    src="./public/image/strawberry-yogurt.webp"
+                                    alt=""
+                            /></span>
+                            <div class="product-row-info">
+                                <h3>Trà dâu tươi</h3>
+                                <p>Trà</p>
+                            </div>
+                            <b class="card-price">55.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=strawberry-tea"
+                                    class="product-row-action"
+                                    aria-label="Sửa Trà dâu tươi"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Trà dâu tươi"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="matcha-frappe"
+                        >
+                            <span
+                                class="card-icon product-photo-wrap menu-crop menu-matcha"
+                                aria-hidden="true"
+                            ></span>
+                            <div class="product-row-info">
+                                <h3>Matcha đá xay</h3>
+                                <p>Cà phê</p>
+                            </div>
+                            <b class="card-price">65.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=matcha-frappe"
+                                    class="product-row-action"
+                                    aria-label="Sửa Matcha đá xay"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Matcha đá xay"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                        <article
+                            class="simple-card product-row"
+                            data-product-id="brownie"
+                        >
+                            <span
+                                class="card-icon product-photo-wrap menu-crop menu-tiramisu"
+                                aria-hidden="true"
+                            ></span>
+                            <div class="product-row-info">
+                                <h3>Brownie chocolate</h3>
+                                <p>Bánh</p>
+                            </div>
+                            <b class="card-price">45.000 ₫</b>
+                            <span class="product-status-pill"
+                                ><i aria-hidden="true"></i> Đang bán</span
+                            >
+                            <div class="product-row-actions">
+                                <a href="create-product.html?edit=brownie"
+                                    class="product-row-action"
+                                    aria-label="Sửa Brownie chocolate"
+                                    title="Sửa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-pen"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Sửa</span></a
+                                ><button
+                                    type="button"
+                                    class="product-row-action product-row-delete"
+                                    aria-label="Xóa Brownie chocolate"
+                                    title="Xóa sản phẩm"
+                                >
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                        aria-hidden="true"
+                                    ></i
+                                    ><span>Xóa</span>
+                                </button>
+                            </div>
+                        </article>
+                    </section>
+                    <p class="product-empty-state" hidden>
+                        Không tìm thấy sản phẩm trong danh mục này.
+                    </p>
+                <section class="product-toppings-panel" id="toppings">
+<div class="product-toppings-heading"><div><span class="product-toppings-kicker">TÙY CHỌN MÓN</span><h2>Topping &amp; món thêm</h2><p>Quản lý giá phụ thu, định lượng và tình trạng topping đang bán.</p></div><a class="product-topping-add" href="create-product.html"><i class="fa-solid fa-plus" aria-hidden="true"></i> Thêm topping</a></div>
+<div class="product-toppings-table-wrap"><table class="product-toppings-table"><thead><tr><th>Topping</th><th>Giá thêm</th><th>Trừ kho / phần</th><th>Nhóm món áp dụng</th><th>Trạng thái</th></tr></thead><tbody>
+<tr><td><span class="product-topping-name"><i class="fa-solid fa-circle" aria-hidden="true"></i><strong>Trân châu đen</strong></span></td><td>8.000 ₫</td><td>30 g · Trân châu đen</td><td>Trà, cà phê, sữa chua</td><td><span class="product-topping-status on">Đang bán</span></td></tr>
+<tr><td><span class="product-topping-name peach"><i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i><strong>Thạch đào</strong></span></td><td>7.000 ₫</td><td>40 g · Thạch đào</td><td>Trà trái cây, trà sữa</td><td><span class="product-topping-status on">Đang bán</span></td></tr>
+<tr><td><span class="product-topping-name cheese"><i class="fa-solid fa-cheese" aria-hidden="true"></i><strong>Kem cheese</strong></span></td><td>12.000 ₫</td><td>25 g · Kem cheese</td><td>Trà, cà phê đá xay</td><td><span class="product-topping-status on">Đang bán</span></td></tr>
+<tr><td><span class="product-topping-name pudding"><i class="fa-solid fa-egg" aria-hidden="true"></i><strong>Pudding trứng</strong></span></td><td>8.000 ₫</td><td>1 phần · Pudding trứng</td><td>Trà sữa, món tráng miệng</td><td><span class="product-topping-status off">Tạm hết</span></td></tr>
+</tbody></table></div>
+<p class="product-topping-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Topping được chọn riêng cho từng ly tại màn hình bán hàng; phụ thu sẽ cộng vào giá món.</p>
+</section>
+</div>
+            </main>
+        </div>
+        
+    </body>
+</html>

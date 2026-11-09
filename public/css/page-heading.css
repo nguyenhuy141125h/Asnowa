@@ -1,0 +1,74 @@
+/* One heading pattern for every dashboard page. Load this file last. */
+body[class] .app-page-heading {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  margin: 0 0 24px !important;
+  padding: 0 0 19px !important;
+  border-bottom: 1px solid #d8e7db !important;
+}
+
+body[class] .app-page-heading > div:first-child { min-width: 0; }
+
+body[class] .app-page-heading :is(.eyebrow,.home-eyebrow) {
+  display: block;
+  color: #a56b2d !important;
+  font: 700 11px/1.35 'Montserrat',Arial,sans-serif !important;
+  letter-spacing: .12em !important;
+}
+
+body[class] .app-page-heading h1 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 6px 0 5px !important;
+  color: #173b28 !important;
+  font-family: 'Montserrat',Arial,sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.035em !important;
+}
+
+body[class] .app-page-heading h1 > i {
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 11px !important;
+  background: #e8f4e9 !important;
+  color: #206b3b !important;
+  font-size: 18px !important;
+}
+
+body[class] .app-page-heading h1 > span { min-width: 0; }
+
+body[class] .app-page-heading p {
+  margin: 0 !important;
+  color: #667a6d !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+}
+
+body.page-sales .pos-screen { padding-top: 0 !important; }
+
+@media (max-width: 650px) {
+  body[class] .app-page-heading {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 13px !important;
+    margin-bottom: 19px !important;
+    padding-bottom: 16px !important;
+  }
+
+  body[class] .app-page-heading h1 { font-size: 26px !important; }
+  body[class] .app-page-heading h1 > i {
+    width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px;
+    font-size: 17px !important;
+  }
+  body[class] .app-page-heading p { font-size: 14px !important; }
+}

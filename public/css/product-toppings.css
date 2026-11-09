@@ -1,0 +1,36 @@
+body.page-products .product-heading-actions .product-row-action,
+body.page-products .product-row-actions a.product-row-action { text-decoration: none; }
+body.page-products .product-toppings-panel { margin-top: 24px; padding: 21px; border: 1px solid #eadfce; border-radius: 15px; background: #fff; box-shadow: 0 7px 22px rgba(70,54,35,.045); }
+body.page-products .product-toppings-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+body.page-products .product-toppings-kicker { color: #9a6a36; font-size: 10px; font-weight: 800; letter-spacing: .15em; }
+body.page-products .product-toppings-heading h2 { margin: 5px 0 4px; color: #26392d; font: 750 19px/1.25 'Montserrat',Arial,sans-serif; }
+body.page-products .product-toppings-heading p { margin: 0; color: #758178; font-size: 13px; }
+body.page-products .product-topping-add { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border: 1px solid #e5d5be; border-radius: 8px; background: #fbf6ed; color: #8a602e; font-size: 12px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+body.page-products .product-topping-add:hover { background: #f6ecdb; }
+body.page-products .product-toppings-table-wrap { overflow-x: auto; border: 1px solid #ebe8e1; border-radius: 10px; }
+body.page-products .product-toppings-table { width: 100%; min-width: 740px; border-collapse: collapse; }
+body.page-products .product-toppings-table th,body.page-products .product-toppings-table td { padding: 12px 13px; border-bottom: 1px solid #efeee9; text-align: left; font-size: 12px; }
+body.page-products .product-toppings-table th { background: #faf8f4; color: #736c5f; font-size: 10px; font-weight: 800; white-space: nowrap; }
+body.page-products .product-toppings-table td { color: #68746c; }
+body.page-products .product-toppings-table tr:last-child td { border-bottom: 0; }
+body.page-products .product-toppings-table td:nth-child(2) { color: #775a35; font-weight: 800; white-space: nowrap; }
+body.page-products .product-topping-name { display: inline-flex; align-items: center; gap: 9px; color: #876132; }
+body.page-products .product-topping-name i { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: #f6efe3; font-size: 12px; }
+body.page-products .product-topping-name strong { color: #35483b; font-size: 12px; }
+body.page-products .product-topping-name.peach { color: #b97838; }
+body.page-products .product-topping-name.peach i { background: #fbf1e5; }
+body.page-products .product-topping-name.cheese { color: #8b7650; }
+body.page-products .product-topping-name.cheese i { background: #f6f1e6; }
+body.page-products .product-topping-name.pudding { color: #8b6b99; }
+body.page-products .product-topping-name.pudding i { background: #f3eef6; }
+body.page-products .product-topping-status { display: inline-flex; padding: 5px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+body.page-products .product-topping-status.on { background: #eaf5ec; color: #33784b; }
+body.page-products .product-topping-status.off { background: #fff2df; color: #a66b1d; }
+body.page-products .product-topping-note { display: flex; align-items: flex-start; gap: 7px; margin: 12px 0 0; color: #7b857d; font-size: 11px; line-height: 1.5; }
+body.page-products .product-topping-note i { margin-top: 2px; color: #8b7650; }
+@media (max-width: 650px) {
+  body.page-products .product-toppings-panel { margin-top: 16px; padding: 14px; }
+  body.page-products .product-toppings-heading { align-items: flex-start; flex-direction: column; }
+  body.page-products .product-toppings-heading h2 { font-size: 16px; }
+  body.page-products .product-topping-add { width: 100%; justify-content: center; }
+}

@@ -1,0 +1,148 @@
+/* Raise small interface text consistently across all dashboard pages. */
+body .dashboard-shell { font-size: 16px !important; }
+body[class] .dashboard-shell small {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+body[class] .dashboard-shell :is(input,textarea)::placeholder { font-size: 14px !important; }
+
+body[class] .dashboard-shell :is(p,span,a,label,td,th,time,li) {
+  font-size: max(14px,1em) !important;
+}
+
+body .dashboard-shell :is(.sidebar-label,.eyebrow,.home-eyebrow,.report-kicker) {
+  font-size: 13px !important;
+}
+
+body .dashboard-shell :is(.breadcrumb,.store-open,.admin-profile strong,.admin-profile small,.home-welcome small,.home-admin strong,.home-admin small,.home-date) {
+  font-size: 14px !important;
+}
+
+body .dashboard-shell :is(.page-heading p,.app-page-heading p,.home-title-row p,.pos-titlebar p) {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+body .dashboard-shell :is(.home-panel-head p,.pos-section-heading p,.floor-card-head p,.report-panel-head p,.dialog-hint,.table-detail-hint) {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+body.home-dashboard :is(.home-metric small,.metric-change,.metric-change small,.chart-y-labels,.chart-x-labels,.category-donut small,.category-legend>div,.category-legend b,.best-row strong,.best-row>b,.best-row>b small,.rank,.table-stat span,.table-stat strong small,.home-activity p,.home-activity time,.home-activity>strong,.promo-copy>span,.promo-copy p,.promo-copy a) {
+  font-size: 14px !important;
+}
+
+body.home-dashboard .home-metric small,
+body.home-dashboard .category-legend>div,
+body.home-dashboard .category-legend b,
+body.home-dashboard .table-stat span { font-size: 15px !important; }
+
+body.home-dashboard :is(.home-metric small,.chart-y-labels,.chart-x-labels,.category-legend>div,.best-row strong,.best-row>b,.table-stat span,.home-activity p,.home-activity>strong) {
+  line-height: 1.4 !important;
+}
+
+body.home-dashboard .home-panel-head h2 { font-size: 19px !important; }
+body.home-dashboard .home-panel-head a { font-size: 14px !important; }
+body.home-dashboard .chart-tooltip span { font-size: 14px !important; }
+body.home-dashboard .home-metric strong { font-size: 26px !important; }
+body.home-dashboard .category-donut small { font-size: 13px !important; }
+body.home-dashboard .home-activity time,.best-row>b small,.table-stat strong small { font-size: 13px !important; }
+
+body[class^="page-"] :is(.page-kpi small,.metric-card small,.simple-card p,.floor-card p,.table-legend span,.table-tile small,.table-tile em,.setting-form label,.dialog-fields label,.dialog-hint,.dialog-fields input,.dialog-fields select,.dialog-fields textarea,.filter-row select,.segmented button,.inline-search input,.status-pill) {
+  font-size: 14px !important;
+}
+
+body[class^="page-"] :is(.data-table,.customer-table,.staff-table) th { font-size: 14px !important; }
+body[class^="page-"] :is(.data-table,.customer-table,.staff-table) td { font-size: 15px !important; }
+body[class^="page-"] .status-pill { min-height: 30px !important; padding: 5px 10px !important; }
+body[class^="page-"] .page-kpi small { line-height: 1.4 !important; }
+body[class^="page-"] .filter-row select,body[class^="page-"] .segmented button { min-height: 42px !important; }
+
+body.page-sales :is(.pos-categories button,.pos-product-info strong,.pos-product-info small,.pos-product-info b,.pos-line-name strong,.pos-line-name small,.pos-line-price,.pos-qty,.pos-payment-label,.pos-payment-options button,.pos-totals>div,.pos-totals button,.pos-customer-entry strong,.pos-customer-entry small,.pos-order-meta,.pos-note,.pos-stock,.pos-shift,.pos-table,.pos-customer) {
+  font-size: 14px !important;
+}
+body.page-sales .pos-cart-columns { font-size: 13px !important; }
+body.page-sales :is(.pos-product-info strong,.pos-line-name strong) { font-size: 16px !important; }
+body.page-sales :is(.pos-product-info b,.pos-line-price,.pos-totals>div) { font-size: 15px !important; }
+
+body.page-reports :is(.report-period-row>span,.report-metric small,.report-change,.report-change em,.report-panel-head>a,.report-y-axis,.report-bar-wrap>b,.report-bar-wrap>small,.report-donut small,.report-legend>div,.report-legend b,.report-product-row small,.report-product-row>b,.report-live,.report-week-list>div,.report-week-list b,.report-period-tabs button,.report-total small,.report-rank) {
+  font-size: 14px !important;
+}
+body.page-reports :is(.report-donut strong,.report-total) { font-size: 20px !important; }
+
+body.staff-dashboard :is(.staff-table th,.staff-table td,.staff-person,.role-pill,.status-pill,.table-footer,.detail-info>div,.detail-info strong,.day,.dialog-fields label,.dialog-hint) {
+  font-size: 14px !important;
+}
+
+@media (max-width: 650px) {
+  body .dashboard-shell :is(.page-heading p,.app-page-heading p,.home-title-row p,.pos-titlebar p) { font-size: 14px !important; }
+  body.home-dashboard :is(.chart-y-labels,.chart-x-labels,.category-legend>div,.best-row strong,.best-row>b,.table-stat span,.home-activity p,.home-activity>strong) { font-size: 14px !important; }
+  body[class^="page-"] :is(.data-table,.customer-table,.staff-table) th { font-size: 14px !important; }
+  body[class^="page-"] :is(.data-table,.customer-table,.staff-table) td { font-size: 14px !important; }
+}
+/* Keep the donut label inside its center, and surface actionable stock warnings. */
+body.home-dashboard .category-donut > div small {
+  max-width: 100%;
+  font-size: 13px !important;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+body.home-dashboard .home-stock-panel { min-height: 220px; }
+body.home-dashboard .home-stock-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 3px 0 7px;
+}
+body.home-dashboard .home-stock-count {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+body.home-dashboard .home-stock-count.is-low { background: #fff4df; color: #9b640d; }
+body.home-dashboard .home-stock-count.is-out { background: #ffede9; color: #b44735; }
+body.home-dashboard .home-stock-count strong { font-size: 19px; line-height: 1; }
+body.home-dashboard .home-stock-count span { font-size: 13px !important; font-weight: 600; }
+body.home-dashboard .home-stock-list { display: grid; }
+body.home-dashboard .home-stock-row {
+  min-height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 2px;
+  border-top: 1px solid #f0eee8;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color .18s ease, padding .18s ease, border-radius .18s ease;
+}
+body.home-dashboard .home-stock-row:hover,
+body.home-dashboard .home-stock-row:focus-visible {
+  padding-right: 9px;
+  padding-left: 9px;
+  border-radius: 10px;
+  background: #f5f9f2;
+  outline: none;
+}
+body.home-dashboard .home-stock-info { min-width: 0; display: grid; gap: 2px; }
+body.home-dashboard .home-stock-info > strong { color: #26352a; font-size: 14px; }
+body.home-dashboard .home-stock-info small { color: #737c73; font-size: 13px !important; }
+body.home-dashboard .home-stock-info i { padding: 0 3px; color: #a0a79f; font-style: normal; }
+body.home-dashboard .home-stock-status {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #fff2d9;
+  color: #99600c;
+  font-size: 13px !important;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media (max-width: 620px) {
+  body.home-dashboard .home-stock-count { padding: 6px 8px; }
+  body.home-dashboard .home-stock-count span,
+  body.home-dashboard .home-stock-info small { font-size: 13px !important; }
+}

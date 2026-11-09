@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Sơ đồ bàn</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/pages.css" />
+        <link rel="stylesheet" href="./public/css/system-pages.css" />
+        <script defer src="./public/js/app.js?v=20261109-table-map-v2"></script>
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261105-management-forms-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/table-map.css?v=20261109-table-redesign-v1" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+</head>
+    <body class="page-tables">
+        <div class="dashboard-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav">
+                    <a class="nav-link" href="index.html"
+                        ><i class="fa-solid fa-chart-pie"></i
+                        ><span>Tổng quan</span></a
+                    ><a class="nav-link" href="sales.html"
+                        ><i class="fa-solid fa-cash-register"></i
+                        ><span>Bán hàng (POS)</span></a
+                    ><a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt"></i
+                        ><span>Đơn hàng</span></a
+                    ><a class="nav-link active" href="tables.html"
+                        ><i class="fa-solid fa-table-cells-large"></i
+                        ><span>Sơ đồ bàn</span></a
+                    ><a class="nav-link" href="products.html"
+                        ><i class="fa-solid fa-mug-hot"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a><a class="nav-link" href="inventory.html"
+                        ><i class="fa-solid fa-boxes-stacked"></i
+                        ><span>Kho hàng</span></a
+                    ><a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users"></i
+                        ><span>Khách hàng</span></a
+                    ><a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags"></i
+                        ><span>Khuyến mãi</span></a
+                    ><a class="nav-link" href="reports.html"
+                        ><i class="fa-solid fa-chart-column"></i
+                        ><span>Báo cáo</span></a
+                    ><a class="nav-link" href="staff.html"
+                        ><i class="fa-solid fa-user-group"></i
+                        ><span>Nhân viên</span></a
+                    ><a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+            <main class="main-area">
+                <header class="topbar">
+                    <span class="breadcrumb"
+                        >Quản lý cửa hàng　›　<strong>Sơ đồ bàn</strong></span
+                    >
+                    <div class="topbar-actions">
+                        <span class="store-open"
+                            ><i class="fa-solid fa-circle"></i> Cửa hàng đang
+                            mở</span
+                        ><button class="icon-button" aria-label="Thông báo">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div class="admin-profile">
+                            <span class="avatar">A</span
+                            ><span
+                                ><strong>Quản trị viên</strong
+                                ><small>SNOWA Cafe</small></span
+                            >
+                        </div>
+                    </div>
+                </header>
+                <div class="page-content">
+                    <div class="page-heading app-page-heading">
+                        <div>
+                            
+                            </h1>
+                            <p>
+                                Theo dõi từng khu vực và chọn bàn để xem nhanh tình trạng phục vụ.
+                            </p>
+                        </div>
+                        <a class="button-light" href="sales.html"
+                            ><i class="fa-solid fa-calendar-plus"></i> Tạo đơn
+                            tại bàn</a
+                        >
+                    </div>
+                    <section class="table-overview" aria-label="Tổng quan tình trạng bàn">
+  <div class="table-stat"><span class="stat-icon"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></span><span><small>Tổng số bàn</small><strong data-table-count="total">12</strong></span></div>
+  <div class="table-stat"><span class="stat-icon vacant"><i class="fa-solid fa-chair" aria-hidden="true"></i></span><span><small>Bàn trống</small><strong data-table-count="vacant">6</strong></span></div>
+  <div class="table-stat"><span class="stat-icon serving"><i class="fa-solid fa-utensils" aria-hidden="true"></i></span><span><small>Đang phục vụ</small><strong data-table-count="serving">4</strong></span></div>
+  <div class="table-stat"><span class="stat-icon booked"><i class="fa-regular fa-clock" aria-hidden="true"></i></span><span><small>Đặt trước</small><strong data-table-count="booked">1</strong></span></div>
+  <div class="table-stat"><span class="stat-icon cleaning"><i class="fa-solid fa-broom" aria-hidden="true"></i></span><span><small>Cần dọn</small><strong data-table-count="cleaning">1</strong></span></div>
+</section>
+<section class="table-workspace" aria-labelledby="table-workspace-title">
+  <div class="table-workspace-head">
+    <div><span class="eyebrow">SƠ ĐỒ PHỤC VỤ</span><h2 id="table-workspace-title">Bàn theo khu vực</h2><p>Chọn khu vực và bàn để xem hoặc cập nhật trạng thái.</p></div>
+    <div class="table-legend" aria-label="Chú thích trạng thái"><span class="vacant">Trống</span><span class="serving">Đang phục vụ</span><span class="booked">Đặt trước</span><span class="cleaning">Cần dọn</span></div>
+  </div>
+  <div class="table-floor-toolbar">
+  <div class="table-floor-tabs" role="group" aria-label="Chọn khu vực">
+    <button type="button" class="active" data-floor-target="floor-1" aria-pressed="true">Tầng 1 <small>6 bàn</small></button>
+    <button type="button" data-floor-target="floor-2" aria-pressed="false">Tầng 2 <small>4 bàn</small></button>
+    <button type="button" data-floor-target="garden" aria-pressed="false">Sân vườn <small>2 bàn</small></button>
+  </div>
+  <div class="table-management-actions">
+    <button type="button" class="table-add-floor" data-add-floor><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Thêm khu vực</button>
+    <button type="button" class="table-delete-floor" data-delete-floor><i class="fa-regular fa-trash-can" aria-hidden="true"></i> Xóa khu vực</button>
+    <button type="button" class="table-add-table" data-add-table><i class="fa-solid fa-plus" aria-hidden="true"></i> Thêm bàn</button>
+  </div>
+  </div>
+  <div class="table-layout">
+    <div class="floor-panels">
+      <section class="floor-card" data-floor="floor-1" aria-label="Bàn khu A tầng 1">
+        <div class="floor-card-head"><div><h3>Khu A · Tầng 1</h3><p>Không gian chính</p></div><span>6 bàn</span></div>
+        <div class="table-grid">
+          <button type="button" class="table-tile" data-seats="4 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-chair" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>A01</strong><small>Trống</small><em>4 chỗ</em></button>
+          <button type="button" class="table-tile busy" data-seats="4 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-utensils" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>A02</strong><small>Đang phục vụ</small><em>4 chỗ</em></button>
+          <button type="button" class="table-tile busy is-selected" data-seats="4 chỗ" aria-pressed="true"><span class="tile-top"><i class="fa-solid fa-utensils" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>A03</strong><small>Đang phục vụ</small><em>4 chỗ</em></button>
+          <button type="button" class="table-tile booked" data-seats="4 chỗ" data-booking-time="19:00" aria-pressed="false"><span class="tile-top"><i class="fa-regular fa-clock" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>A04</strong><small>Đặt trước</small><em>19:00 · 4 chỗ</em></button>
+          <button type="button" class="table-tile" data-seats="2 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-chair" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>A05</strong><small>Trống</small><em>2 chỗ</em></button>
+          <button type="button" class="table-tile" data-seats="4 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-chair" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>A06</strong><small>Trống</small><em>4 chỗ</em></button>
+        </div>
+      </section>
+      <section class="floor-card" data-floor="floor-2" aria-label="Bàn khu B tầng 2" hidden>
+        <div class="floor-card-head"><div><h3>Khu B · Tầng 2</h3><p>Không gian yên tĩnh</p></div><span>4 bàn</span></div>
+        <div class="table-grid">
+          <button type="button" class="table-tile" data-seats="4 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-chair" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>B01</strong><small>Trống</small><em>4 chỗ</em></button>
+          <button type="button" class="table-tile busy" data-seats="4 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-utensils" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>B02</strong><small>Đang phục vụ</small><em>4 chỗ</em></button>
+          <button type="button" class="table-tile" data-seats="2 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-chair" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>B03</strong><small>Trống</small><em>2 chỗ</em></button>
+          <button type="button" class="table-tile cleaning" data-seats="2 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-broom" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>B04</strong><small>Cần dọn</small><em>2 chỗ</em></button>
+        </div>
+      </section>
+      <section class="floor-card" data-floor="garden" aria-label="Bàn sân vườn" hidden>
+        <div class="floor-card-head"><div><h3>Sân vườn</h3><p>Khu vực ngoài trời</p></div><span>2 bàn</span></div>
+        <div class="table-grid">
+          <button type="button" class="table-tile" data-seats="4 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-chair" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>C01</strong><small>Trống</small><em>4 chỗ</em></button>
+          <button type="button" class="table-tile busy" data-seats="2 chỗ" aria-pressed="false"><span class="tile-top"><i class="fa-solid fa-utensils" aria-hidden="true"></i><span class="tile-dot"></span></span><strong>C02</strong><small>Đang phục vụ</small><em>2 chỗ</em></button>
+        </div>
+      </section>
+    </div>
+    <aside class="table-detail" aria-label="Thông tin bàn đang chọn">
+      <div class="table-detail-heading"><span class="eyebrow">BÀN ĐANG CHỌN</span><span class="detail-status serving" data-detail-status>Đang phục vụ</span></div>
+      <strong class="table-detail-code" data-detail-code>A03</strong>
+      <p class="table-detail-zone" data-detail-zone>Khu A · Tầng 1</p>
+      <div class="table-detail-facts"><div><span>Sức chứa</span><b data-detail-seats>4 chỗ</b></div><div><span>Tình trạng</span><b data-detail-state>Đang phục vụ</b></div></div>
+      <div class="table-status-editor">
+        <label id="table-status-label" for="table-status-trigger">Cập nhật trạng thái bàn</label>
+        <div class="table-status-picker" data-status-picker>
+          <button type="button" class="table-status-trigger" id="table-status-trigger" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="table-status-label table-status-value">
+            <span class="table-status-trigger-copy"><i class="fa-solid fa-chair" data-status-trigger-icon aria-hidden="true"></i><span id="table-status-value" data-status-trigger-label>Trống</span></span>
+            <i class="fa-solid fa-chevron-down table-status-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="table-status-menu" data-status-menu role="listbox" aria-labelledby="table-status-label" hidden>
+            <button type="button" class="table-status-option" role="option" data-status-option="vacant" aria-selected="false"><i class="fa-solid fa-chair status-option-icon vacant" aria-hidden="true"></i><span><strong>Trống</strong><small>Sẵn sàng đón khách</small></span><i class="fa-solid fa-check option-check" aria-hidden="true"></i></button>
+            <button type="button" class="table-status-option" role="option" data-status-option="serving" aria-selected="false"><i class="fa-solid fa-utensils status-option-icon serving" aria-hidden="true"></i><span><strong>Đang phục vụ</strong><small>Bàn đang có khách</small></span><i class="fa-solid fa-check option-check" aria-hidden="true"></i></button>
+            <button type="button" class="table-status-option" role="option" data-status-option="booked" aria-selected="false"><i class="fa-regular fa-clock status-option-icon booked" aria-hidden="true"></i><span><strong>Đặt trước</strong><small>Đã có lịch đặt bàn</small></span><i class="fa-solid fa-check option-check" aria-hidden="true"></i></button>
+            <button type="button" class="table-status-option" role="option" data-status-option="cleaning" aria-selected="false"><i class="fa-solid fa-broom status-option-icon cleaning" aria-hidden="true"></i><span><strong>Cần dọn</strong><small>Chờ nhân viên vệ sinh</small></span><i class="fa-solid fa-check option-check" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <select id="table-status-select" data-status-select class="table-status-native" tabindex="-1" aria-hidden="true">
+          <option value="vacant">Trống</option>
+          <option value="serving" selected>Đang phục vụ</option>
+          <option value="booked">Đặt trước</option>
+          <option value="cleaning">Cần dọn</option>
+        </select>
+        <label class="table-booking-time" data-booking-time-wrap hidden>Giờ đặt trước
+          <input type="time" data-booking-time-input>
+        </label>
+        <button type="button" class="button-primary" data-update-table-status>Lưu trạng thái</button>
+      </div>
+      <a class="button-primary table-detail-action" href="sales.html"><i class="fa-solid fa-cash-register" aria-hidden="true"></i> Mở bán hàng tại bàn</a>
+      <button type="button" class="table-delete-button" data-delete-table><i class="fa-regular fa-trash-can" aria-hidden="true"></i> Xóa bàn đang chọn</button>
+      <p class="table-delete-rule" data-delete-rule>Chỉ xóa được bàn trống hoặc đang cần dọn.</p>
+      <p class="table-detail-hint">Thay đổi chỉ giữ trên trang hiện tại; tải lại trang sẽ về mặc định.</p>
+    </aside>
+  </div>
+</section>
+<dialog class="static-dialog" id="table-floor-dialog" aria-labelledby="table-floor-title">
+  <form data-table-floor-form>
+    <div class="dialog-top"><h2 id="table-floor-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Thêm khu vực</h2><button class="dialog-close" type="button" data-dialog-close aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button></div>
+    <p class="dialog-hint">Tạo tầng hoặc khu vực mới cho sơ đồ phục vụ.</p>
+    <div class="dialog-fields"><label>Tên khu vực<input name="name" maxlength="40" placeholder="Ví dụ: Tầng 3, Sân thượng" required></label><label>Mô tả không gian<input name="description" maxlength="80" placeholder="Ví dụ: Khu vực ngoài trời"></label></div>
+    <div class="dialog-actions"><button class="button-light" type="button" data-dialog-close>Hủy</button><button class="button-primary" type="submit"><i class="fa-solid fa-check" aria-hidden="true"></i> Tạo khu vực</button></div>
+  </form>
+</dialog>
+<dialog class="static-dialog" id="table-create-dialog" aria-labelledby="table-create-title">
+  <form data-table-create-form>
+    <div class="dialog-top"><h2 id="table-create-title"><i class="fa-solid fa-chair" aria-hidden="true"></i> Thêm bàn mới</h2><button class="dialog-close" type="button" data-dialog-close aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button></div>
+    <p class="dialog-hint">Bàn mới sẽ bắt đầu ở trạng thái trống.</p>
+    <div class="dialog-fields"><label>Khu vực<select name="floor" data-table-floor-select required></select></label><label>Mã bàn<input name="code" maxlength="8" placeholder="Ví dụ: A07" required></label><label>Sức chứa<input name="seats" type="number" min="1" max="20" value="4" required></label></div>
+    <div class="dialog-actions"><button class="button-light" type="button" data-dialog-close>Hủy</button><button class="button-primary" type="submit"><i class="fa-solid fa-check" aria-hidden="true"></i> Thêm bàn</button></div>
+  </form>
+</dialog>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

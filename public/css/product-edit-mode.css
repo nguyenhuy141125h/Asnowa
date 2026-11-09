@@ -1,0 +1,5 @@
+body.page-create-product[data-mode="edit"] .product-edit-context { display: flex; align-items: flex-start; gap: 11px; margin: 0 0 14px; padding: 12px 15px; border: 1px solid #e3d6c3; border-radius: 10px; background: #fbf7ef; color: #81613d; }
+body.page-create-product[data-mode="edit"] .product-edit-context>i { margin-top: 2px; }
+body.page-create-product[data-mode="edit"] .product-edit-context span { display: grid; gap: 3px; font-size: 13px; }
+body.page-create-product[data-mode="edit"] .product-edit-context strong { color: #3d4b3f; }
+body.page-create-product[data-mode="edit"] .product-edit-context small { color: #7f887e; font-size: 11px; }

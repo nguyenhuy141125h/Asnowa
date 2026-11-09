@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SNOWA · Kho hàng</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./public/css/dashboard.css" />
+        <link rel="stylesheet" href="./public/css/pages.css" />
+        <link rel="stylesheet" href="./public/css/system-pages.css" />
+        <script defer src="./public/js/app.js"></script>
+        <link
+            rel="stylesheet"
+            href="./public/css/snowa-identity.css?v=20261105-management-forms-v2"
+        />
+        <link rel="stylesheet" href="./public/css/ui-refresh.css?v=20261109" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    <link rel="stylesheet" href="./public/css/page-heading.css?v=20261109" />
+        <link rel="stylesheet" href="./public/css/app-shell.css?v=20261109-v4" />
+            <link rel="stylesheet" href="./public/css/readable-type.css?v=20261109-v1" />
+            <link rel="stylesheet" href="./public/css/inventory.css?v=20261109-receipt-v1" />
+      <link rel="stylesheet" href="./public/css/module-themes.css?v=20261109-v3" />
+
+        <link rel="stylesheet" href="./public/css/reference-palette.css?v=20261109-v6" />
+</head>
+    <body class="page-inventory">
+        <div class="dashboard-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html"
+                    ><img
+                        class="brand-logo"
+                        src="./public/image/logo.webp"
+                        alt="SNOWA · Fresh Moments Cafe"
+                /></a>
+                <div class="sidebar-label">QUẢN LÝ CỬA HÀNG</div>
+                <nav class="side-nav">
+                    <a class="nav-link" href="index.html"
+                        ><i class="fa-solid fa-chart-pie"></i
+                        ><span>Tổng quan</span></a
+                    ><a class="nav-link" href="sales.html"
+                        ><i class="fa-solid fa-cash-register"></i
+                        ><span>Bán hàng (POS)</span></a
+                    ><a class="nav-link" href="orders.html"
+                        ><i class="fa-solid fa-receipt"></i
+                        ><span>Đơn hàng</span></a
+                    ><a class="nav-link" href="tables.html"
+                        ><i class="fa-solid fa-table-cells-large"></i
+                        ><span>Sơ đồ bàn</span></a
+                    ><a class="nav-link" href="products.html"
+                        ><i class="fa-solid fa-mug-hot"></i
+                        ><span>Sản phẩm</span></a
+                    ><a class="nav-link" href="product-categories.html"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Danh mục sản phẩm</span></a><a class="nav-link active" href="inventory.html"
+                        ><i class="fa-solid fa-boxes-stacked"></i
+                        ><span>Kho hàng</span></a
+                    ><a class="nav-link" href="customers.html"
+                        ><i class="fa-solid fa-users"></i
+                        ><span>Khách hàng</span></a
+                    ><a class="nav-link" href="promotions-admin.html"
+                        ><i class="fa-solid fa-tags"></i
+                        ><span>Khuyến mãi</span></a
+                    ><a class="nav-link" href="reports.html"
+                        ><i class="fa-solid fa-chart-column"></i
+                        ><span>Báo cáo</span></a
+                    ><a class="nav-link" href="staff.html"
+                        ><i class="fa-solid fa-user-group"></i
+                        ><span>Nhân viên</span></a
+                    ><a class="nav-link" href="settings.html"
+                        ><i class="fa-solid fa-gear"></i><span>Cài đặt</span></a
+                    >
+                </nav>
+                <div class="sidebar-bottom">
+                    <span>Fresh moments, every day</span>
+                </div>
+            </aside>
+            <main class="main-area">
+                <header class="topbar">
+                    <span class="breadcrumb"
+                        >Quản lý cửa hàng　›　<strong>Kho hàng</strong></span
+                    >
+                    <div class="topbar-actions">
+                        <span class="store-open"
+                            ><i class="fa-solid fa-circle"></i> Cửa hàng đang
+                            mở</span
+                        ><button class="icon-button" aria-label="Thông báo">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div class="admin-profile">
+                            <span class="avatar">A</span
+                            ><span
+                                ><strong>Quản trị viên</strong
+                                ><small>SNOWA Cafe</small></span
+                            >
+                        </div>
+                    </div>
+                </header>
+                <div class="page-content">
+                    <div class="page-heading app-page-heading">
+                        <div>
+                            
+                            </h1>
+                            <p>
+                                Quản lý kho hàng tại quán, cập nhật hoạt động
+                                trong ngày.
+                            </p>
+                        </div>
+                        <a
+                            class="button-primary"
+                            href="inventory-receipt.html"
+                            ><i class="fa-solid fa-arrow-down-to-line"></i> Tạo phiếu nhập</a
+                        >
+                    </div>
+                    <section class="page-kpis">
+                        <div class="page-kpi">
+                            <small>Nguyên liệu</small><strong>124</strong>
+                        </div>
+                        <div class="page-kpi">
+                            <small>Sắp hết hàng</small
+                            ><strong style="color: #b27432">8</strong>
+                        </div>
+                        <div class="page-kpi">
+                            <small>Đã hết hàng</small
+                            ><strong style="color: #bd503b">2</strong>
+                        </div>
+                        <div class="page-kpi">
+                            <small>Phiếu nhập hôm nay</small><strong>6</strong>
+                        </div>
+                    </section>
+                    <div class="inventory-stock-toolbar">
+                        <div>
+                            <h2>Tồn nguyên liệu</h2>
+                            <p>Số lượng hiện có và mức định mức cần duy trì.</p>
+                        </div>
+                        <label class="inline-search"
+                            ><i class="fa-solid fa-magnifying-glass"></i
+                            ><input placeholder="Tìm nguyên liệu..."
+                        /></label>
+                    </div>
+                    <section class="panel data-panel">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nguyên liệu</th>
+                                    <th>Đơn vị</th>
+                                    <th>Tồn kho</th>
+                                    <th>Định mức</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Bột matcha
+                                    </td>
+                                    <td>Kg</td>
+                                    <td>1,2</td>
+                                    <td>0,5</td>
+                                    <td>
+                                        <span class="status-pill">Đủ hàng</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Sữa tươi
+                                    </td>
+                                    <td>Lít</td>
+                                    <td>18</td>
+                                    <td>10</td>
+                                    <td>
+                                        <span class="status-pill">Đủ hàng</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Đào ngâm
+                                    </td>
+                                    <td>Hũ</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>
+                                        <span class="status-pill warn"
+                                            >Sắp hết</span
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Trân châu đen
+                                    </td>
+                                    <td>Kg</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>
+                                        <span class="status-pill warn"
+                                            >Sắp hết</span
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Đường
+                                    </td>
+                                    <td>Kg</td>
+                                    <td>20</td>
+                                    <td>5</td>
+                                    <td>
+                                        <span class="status-pill">Đủ hàng</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
